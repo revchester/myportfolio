@@ -1,0 +1,14 @@
+@media only screen and (min-width: 320px) {
+    .header-left {
+        display: contents;
+        top: 0;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .title-section {
+        margin: 50px auto
+    }
+}
