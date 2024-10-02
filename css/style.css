@@ -497,14 +497,6 @@ main {
     border: 5px solid goldenrod;
 }
 
-.profile-pic-img {
-    background-image: url(../image/pas-photo/03.jpeg);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid goldenrod;
-}
-
 .info-box {
     border: 2px solid goldenrod;
     border-radius: 5px;
