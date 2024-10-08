@@ -1700,3 +1700,323 @@ tbody tr:hover {
     padding: 5px;
     border: 1px solid yellow;
 }
+
+@media screen and (max-width: 375px) {
+    * {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+    
+    html, body {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #212529;
+    }
+    
+    h1 {
+        color: yellowgreen;
+    }
+    
+    h2 {
+        color: teal;
+    }
+    
+    h3 {
+        color: steelblue;
+    }
+    
+    h4 {
+        color: seagreen;
+    }
+    span {
+        color: yellow;
+    }
+    
+    p {
+        color: wheat;
+    }
+    
+    a {
+        color: violet;
+    }
+    
+    a:hover {
+        color: turquoise;
+    }
+    
+    i {
+        color: tomato;
+    }
+    
+    i:hover {
+        color: thistle;
+    }
+    
+    ol li {
+        color: springgreen;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+    ul li {
+        color: slateblue;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+    header {
+        width: 100%;
+        background-color: black;
+        margin: 0 auto;
+    }
+    
+    .header-left {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .header-left img {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .title-section {
+        text-align: center;
+    }
+    
+    .header-center {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .date-section {
+        text-align: center;
+    }
+    
+    .header-right {
+        display: grid;
+        grid-template-columns: repeat(6, 50px);
+        gap: 5px;
+        justify-content: center;
+        width: 100%;
+        height: 35px;
+    }
+    
+    .container {
+        margin: 0 auto;
+    }
+    
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .main-profile {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .profile-title {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .profile-aboutme {
+        width: 100%;
+        padding: 10px;
+        padding-right: 20px;
+        text-align: justify;
+    }
+    
+    .profile-contact {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .profile-social-media {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .profile-social-media i {
+        padding: 0 10px;
+    }
+    
+    .profile-pic {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .profile-pic img {
+        width: 100px;
+        border-radius: 50%;
+        border: 2px solid yellow;
+    }
+    
+    .info-box {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    
+    .rs-footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .rs-footer-socmed {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .rs-footer-socmed i {
+        padding: 0 10px;
+    }
+    
+    .powered-by {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .powered-by img {
+        width: 100px;
+        height: 50px;
+    }
+    
+    .main-skill {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .skill-title {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .skill-box {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .skill-icon {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .skill-icon img {
+        width: 150px;
+        border-radius: 50%;
+    }
+    
+    .skil-stars {
+        color: skyblue;
+    }
+    
+    .skill-bar-container {
+        width: 100%;
+        background-color: silver;
+        border-radius: 10px;
+        margin: 5px 0;
+        overflow: hidden;
+    }
+    
+    .skill-bar {
+        margin: 0;
+        height: 5px;
+        background-color: sienna;
+        border-radius: 10px;
+    }
+    
+    .skill-footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .skill-footer-socmed {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .skill-footer-socmed i {
+        padding: 0 10px;
+    }
+    
+    .main-experiences {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .experiences-title {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .experiences-list {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .experiences-item {
+        width: 90%;
+    }
+    
+    .experiences-item ol li {
+        margin: 0 auto;
+    }
+    
+    .main-education {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .education-title {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }
+    
+    .education-details {
+        display: contents;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    
+    .education-column {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .education-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+    
+    .edu-icon {
+        width: 100px;
+        height: 100px;
+        margin-right: 25px;
+        border: 3px solid yellow;
+        border-radius: 50%;
+    }
+}
