@@ -1,6 +1,19 @@
 // JavaScript code can go here if needed in the future.
 console.log('Website Layout with Sidebar Loaded');
 
+//  detteksi device
+// Fungsi untuk mendeteksi apakah pengguna menggunakan perangkat mobile
+function redirectToMobile() {
+    // Mengecek lebar layar
+    if (window.innerWidth <= 768) { // Anda bisa menyesuaikan ukuran sesuai kebutuhan
+        // Jika lebar layar <= 768px, maka diarahkan ke URL mobile
+        window.location.href = "https://revchester.github.io/myportfolio-mobile/";
+    }
+}
+
+// Memanggil fungsi ketika halaman dimuat
+window.onload = redirectToMobile;
+
 //  date and time function
 function updateDateTime () {
     const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
