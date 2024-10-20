@@ -436,6 +436,11 @@ section {
     height: max-content; /* Atur tinggi kotak sesuai kebutuhan */
 }
 
+.section-content-2col-left p {
+    text-align: right;
+    padding-right: 20px;
+}
+
 .section-content-2col-left h3 {
     text-align: right;
     line-height: 1;
@@ -450,10 +455,14 @@ section {
 
 .section-content-2col-left-list {
     margin: 0;
-    padding: 20px;
+    padding: 20px;/*
     display: flex;
-    flex-grow: 1; /* Agar ul mengambil ruang yang tersisa */
+    flex-grow: 1; /* Agar ul mengambil ruang yang tersisa *//*
     align-items: center; /* Menempatkan ul di tengah vertikal */
+}
+
+.section-content-2col-left-list ol li {
+    text-align: right;
 }
 
 .section-content-2col-left ul li {
@@ -480,6 +489,11 @@ section {
     flex-direction: column; /* Menyusun konten secara vertikal */
     justify-content: space-between; /* Agar konten tersebar antara atas dan bawah */
     height: max-content; /* Atur tinggi kotak sesuai kebutuhan */
+}
+
+.section-content-2col-right p {
+    text-align: left;
+    padding-left: 20px;
 }
 
 .section-content-2col-right h3 {
@@ -546,13 +560,18 @@ section {
     height: max-content; /* Atur tinggi kotak sesuai kebutuhan */
 }
 
+.section-content-3col-left p {
+    text-align: right;
+    padding-right: 20px;
+}
+
 .section-content-3col-left-list {
     margin: 0;
     padding: 20px;
-    display: flex;
-    flex-grow: 1; /* Agar ul mengambil ruang yang tersisa */
-    align-items: center; /* Menempatkan ul di tengah vertikal */
-    line-height: 1.25;
+}
+
+.section-content-3col-left-list ul li {
+    text-align: right;
 }
 
 .section-content-3col-left ul li {
@@ -570,6 +589,10 @@ section {
     border-radius: 20px;
     padding: 20px;
     height: max-content;
+}
+
+.section-content-3col-mid p {
+    text-align: center;
 }
 
 .section-content-3col-mid ul li {
@@ -590,6 +613,11 @@ section {
     flex-direction: column; /* Menyusun konten secara vertikal */
     justify-content: space-between; /* Agar konten tersebar antara atas dan bawah */
     height: max-content; /* Atur tinggi kotak sesuai kebutuhan */
+}
+
+.section-content-3col-right p {
+    text-align: left;
+    padding-left: 20px;
 }
 
 .section-content-3col-right-list {
