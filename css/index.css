@@ -93,7 +93,8 @@ header {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
@@ -197,12 +198,18 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    border: 2px solid red;
     border-radius: 50px;
     margin-right: 20px;
     padding: 20px;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5), /* Bayangan di kiri */
                 5px 5px 10px rgba(0, 0, 0, 0.5),  /* Bayangan di kanan */
                 0px 10px 10px rgba(0, 0, 0, 0.5); /* Bayangan di bawah */
+}
+
+#kalender:hover {
+    background-image: none;
 }
 
 #tahun {
@@ -257,9 +264,11 @@ section {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     padding: 15px;
     border-radius: 20px;
+    border: 2px solid red;
     width: 60%;
     justify-content: flex-end;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5), /* Bayangan di kiri */
@@ -269,6 +278,10 @@ section {
 
 .waktu div {
     margin: 0 5px;
+}
+
+.waktu:hover {
+    background-image: none;
 }
 
 #point {
@@ -426,7 +439,8 @@ section {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     border-radius: 20px;
     padding: 20px;
     line-height: 1.25;
@@ -482,7 +496,8 @@ section {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -524,6 +539,10 @@ section {
     line-height: 1.25;
 }
 
+#pas-photo {
+    width: 317px;
+}
+
 .sec-03 {
     width: 100%;
     margin: 0 auto;
@@ -551,7 +570,8 @@ section {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -585,7 +605,8 @@ section {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     border-radius: 20px;
     padding: 20px;
     height: max-content;
@@ -606,7 +627,8 @@ section {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -902,7 +924,8 @@ footer {
     background-image: url(../image/wallpaper/w-002.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5), /* Bayangan di kiri */
                 5px 5px 10px rgba(0, 0, 0, 0.5),  /* Bayangan di kanan */
                 0px 10px 10px rgba(0, 0, 0, 0.5); /* Bayangan di bawah */
@@ -913,7 +936,7 @@ footer {
     transform: translateY(-10px); /* Gerakan melayang */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih tebal saat hover */
     background: linear-gradient(to bottom, rgb(172, 121, 2), rgb(35, 25, 1));
-    border: 3px solid goldenrod;
+    border: 2px solid goldenrod;
 }
 
 /* Gambar atau ikon di atas teks */
@@ -929,7 +952,7 @@ footer {
 .skill-icon:hover img {
     transform: scale(1.1); /* Perbesar sedikit gambar saat hover */
     background: linear-gradient(to bottom, rgb(172, 121, 2), rgb(35, 25, 1));
-    border: 3px solid red;
+    border: 2px solid red;
 }
 
 /* Teks skill */
@@ -937,6 +960,7 @@ footer {
     margin: 0;
     text-transform: uppercase; /* Huruf besar agar terlihat profesional */
     letter-spacing: 1px; /* Spasi antar huruf untuk estetika */
+    text-align: center;
 }
 
 .sec-07 {
