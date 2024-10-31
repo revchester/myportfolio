@@ -649,7 +649,6 @@ section {
 }
 
 .page-break {
-    text-align: center;
     background-color: rgba(4, 4, 4, 0.5);
     padding: 20px;
 }
@@ -1918,6 +1917,19 @@ th {
     width: 100%;
     margin: 0 auto;
     background-image: url(../image/wallpaper/w-22.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5), /* Bayangan di kiri */
+                5px 5px 10px rgba(0, 0, 0, 0.5),  /* Bayangan di kanan */
+                0px 10px 10px rgba(0, 0, 0, 0.5); /* Bayangan di bawah */
+}
+
+.sec-18 {
+    width: 100%;
+    margin: 0 auto;
+    background-image: url(../image/wallpaper/w-23.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
