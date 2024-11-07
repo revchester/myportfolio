@@ -167,3 +167,24 @@ function updatePreviewImage() {
 
 // Set an interval to update the image every 2 seconds
 setInterval(updatePreviewImage, 2000);
+
+
+//  active image
+document.addEventListener("DOMContentLoaded", function() {
+    const certificationItems = document.querySelectorAll('.certification-item');
+
+    certificationItems.forEach(item => {
+        let images = item.querySelectorAll('img');
+        let currentImageIndex = 0;
+
+        // Tampilkan gambar pertama
+        images[currentImageIndex].classList.add('active-img');
+
+        // Ganti gambar setiap 3 detik
+        setInterval(() => {
+            images[currentImageIndex].classList.remove('active-img');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active-img');
+        }, 3000); // 3000ms = 3 detik
+    });
+});
