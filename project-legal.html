@@ -12,16 +12,16 @@
     <header>
         <div class="logo">
                 <div class="logo-img">
-                    <a href="https://revchester.github.io/myportfolio/"><img src="./image/logo/lonewolf.jpg" alt="logo"></a>
+                    <a href="./index.html"><img src="./image/logo/lonewolf.jpg" alt="logo"></a>
                 </div> 
             <p class="header-title">CURRICULUM VITAE <span>|</span> PORTFOLIO</p>
         </div>
         <nav>
-            <a href="https://revchester.github.io/myportfolio/">HOME</a>
-            <a href="https://revchester.github.io/myportfolio/project">PROJECT</a>
-            <a href="https://revchester.github.io/myportfolio/project-jda">JUNIOR <span>|</span> DA</a>
-            <a href="https://revchester.github.io/myportfolio/project-legal">LEGAL</a>
-            <a href="https://revchester.github.io/myportfolio/project-ndt">NDT</a>
+            <a href="./index.html">HOME</a>
+            <a href="./project.html">PROJECT</a>
+            <a href="./project-jda.html">JUNIOR <span>|</span> DA</a>
+            <a href="./project-legal.html">LEGAL</a>
+            <a href="./project-ndt.html">NDT</a>
         </nav>
     </header>
     <hr>
@@ -51,7 +51,13 @@
                                 <input type="text" id="searchInput" placeholder="Cari di dalam tabel..." onkeyup="searchTable()">
                                 <i class="fa-solid fa-xmark clear-icon" onclick="clearSearch()"></i>
                             </div>
-                            <div class="tab-content" id="pt" style="display: block;">
+                            <div class="pagination-container">
+                                <button id="prevPage" onclick="changePage(-1)"><i class="fa-solid fa-less-than"></i></button>
+                                <span id="pageInfo"></span>
+                                <div id="paginationNumbers"></div>
+                                <button id="nextPage" onclick="changePage(1)"><i class="fa-solid fa-greater-than"></i></button>
+                            </div>
+                            <div class="tab-content table-content" id="pt" style="display: block;">
                                 <h3>Perseroan Terbatas (PT)</h3>
                                 <table>
                                     <thead>
@@ -894,21 +900,21 @@
                                         <!--2023-->
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN MASJID JIHAD TANGAH JUA BUKITTINGGI</td>
+                                            <td>MASJID JIHAD TANGAH JUA BUKITTINGGI</td>
                                             <td>01 / 2023</td>
                                             <td>04-05-2023</td>
                                             <td>Perubahan</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN KELUARGA MUDJAT SUNAN</td>
+                                            <td>KELUARGA MUDJAT SUNAN</td>
                                             <td>01 / 2023</td>
                                             <td>01-02-2023</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN PENDIDIKAN ISLAM AL ISHLAH BUKITTINGGI</td>
+                                            <td>PENDIDIKAN ISLAM AL ISHLAH BUKITTINGGI</td>
                                             <td>07 / 2023</td>
                                             <td>26-01-2023</td>
                                             <td>Perubahan</td>
@@ -916,28 +922,28 @@
                                         <!--2022-->
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN RAUDHATUL AS SALIMY GOBAH</td>
+                                            <td>RAUDHATUL AS SALIMY GOBAH</td>
                                             <td>11 / 2022</td>
                                             <td>28-09-2022</td>
                                             <td>Perubahan</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN MASJID RAYA BUKITTINGGI</td>
+                                            <td>MASJID RAYA BUKITTINGGI</td>
                                             <td>07 / 2022</td>
                                             <td>21-03-2022</td>
                                             <td>Perubahan</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN ALHIDAYAH BARINGIN SALO</td>
+                                            <td>ALHIDAYAH BARINGIN SALO</td>
                                             <td>05 / 2022</td>
                                             <td>11-03-2022</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN TERATAI PERMAI SEJAHTERA</td>
+                                            <td>TERATAI PERMAI SEJAHTERA</td>
                                             <td>02 / 2022</td>
                                             <td>03-02-2022</td>
                                             <td>Pendirian</td>
@@ -945,42 +951,42 @@
                                         <!--2021-->
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN LENTERA NAGARI KURAI</td>
+                                            <td>LENTERA NAGARI KURAI</td>
                                             <td>05 / 2021</td>
                                             <td>27-12-2021</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN ARRAHMANIYYAH AL-MUBAROK BUKITTINGGI</td>
+                                            <td>ARRAHMANIYYAH AL-MUBAROK BUKITTINGGI</td>
                                             <td>06 / 2021</td>
                                             <td>19-08-2021</td>
                                             <td>Perubahan</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN RAUDHATUT THALIBIN TANTAMAN</td>
+                                            <td>RAUDHATUT THALIBIN TANTAMAN</td>
                                             <td>01 / 2021</td>
                                             <td>02-06-2021</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN CAHAYA ISLAMI AL FARUQ</td>
+                                            <td>CAHAYA ISLAMI AL FARUQ</td>
                                             <td>03/ 2021</td>
                                             <td>07-04-2021</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN RAUDHATUL AS SALIMY GOBAH</td>
+                                            <td>RAUDHATUL AS SALIMY GOBAH</td>
                                             <td>17 / 2021</td>
                                             <td>22-02-2021</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN HABIBULLAH SAIYO TALAOK</td>
+                                            <td>HABIBULLAH SAIYO TALAOK</td>
                                             <td>13 / 2021</td>
                                             <td>17-02-2021</td>
                                             <td>Pendirian</td>
@@ -988,28 +994,28 @@
                                         <!--2020-->
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN ANSHORULLAH PEDULI NEGERI</td>
+                                            <td>ANSHORULLAH PEDULI NEGERI</td>
                                             <td>16 / 2020</td>
                                             <td>24-11-2020</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN LANGGAM KASIH BUNDA (LKB)</td>
+                                            <td>LANGGAM KASIH BUNDA (LKB)</td>
                                             <td>05 / 2020</td>
                                             <td>15-07-2020</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN NAGARI AMPEK KOTO PALEMBAYAN (NAKOPA)</td>
+                                            <td>NAGARI AMPEK KOTO PALEMBAYAN (NAKOPA)</td>
                                             <td>16 / 2020</td>
                                             <td>26-02-2020</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN LEMBAGA PEJUANG KEADILAN RANAH MINANG (LPK RM)</td>
+                                            <td>LEMBAGA PEJUANG KEADILAN RANAH MINANG (LPK RM)</td>
                                             <td>09 / 2020</td>
                                             <td>17-02-2020</td>
                                             <td>Pendirian</td>
@@ -1017,21 +1023,21 @@
                                         <!--2019-->
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN SOSIAL DAN PENDIDIKAN AR RAZZAQ PEDULI</td>
+                                            <td>SOSIAL DAN PENDIDIKAN AR RAZZAQ PEDULI</td>
                                             <td>08 / 2019</td>
                                             <td>16-09-2019</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN ABDULLAH IBNU UMAR (AIBU)</td>
+                                            <td>ABDULLAH IBNU UMAR (AIBU)</td>
                                             <td>02 / 2019</td>
                                             <td>15-04-2019</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN BELADIRI PERGURUAN PENCAK SILAT KINANTAN (PPS KINANTAN)</td>
+                                            <td>BELADIRI PERGURUAN PENCAK SILAT KINANTAN (PPS KINANTAN)</td>
                                             <td>06 / 2019</td>
                                             <td>14-03-2019</td>
                                             <td>Pendirian</td>
@@ -1039,7 +1045,7 @@
                                         <!--2018-->
                                         <tr>
                                             <td></td>
-                                            <td>YAYASAN AL-HARIST PERINTIS (ALPE)</td>
+                                            <td>AL-HARIST PERINTIS (ALPE)</td>
                                             <td>03 / 2018</td>
                                             <td>12-11-2018</td>
                                             <td>Pendirian</td>
@@ -1064,21 +1070,21 @@
                                         <!--2023-->
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN POKDARWIS KAYU KUBU</td>
+                                            <td>POKDARWIS KAYU KUBU</td>
                                             <td>10 / 2023</td>
                                             <td>20-02-2023</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN LEMBAGA PENDIDIKAN ANAK YATIM DAN PIATU KENAGARIAN LASI</td>
+                                            <td>LPA YATIM DAN PIATU KENAGARIAN LASI</td>
                                             <td>03 / 2023</td>
                                             <td>03-02-2023</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN JUSTICE COMPANION BUKITTINGGI</td>
+                                            <td>JUSTICE COMPANION BUKITTINGGI</td>
                                             <td>01 / 2023</td>
                                             <td>02-01-2023</td>
                                             <td>Pendirian</td>
@@ -1086,7 +1092,7 @@
                                         <!--2022-->
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN IKATAN KELUARGA PESISIR SELATAN AGAM TIMUR</td>
+                                            <td>IKATAN KELUARGA PESISIR SELATAN AGAM TIMUR</td>
                                             <td>01 / 2022</td>
                                             <td>01-04-2022</td>
                                             <td>Pendirian</td>
@@ -1094,14 +1100,14 @@
                                         <!--2021-->
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN RUMAH TAHFIDZ ALQURAN MADANI TIGO BALAI (RTA MTB)</td>
+                                            <td>RUMAH TAHFIDZ ALQURAN MADANI TIGO BALAI (RTA MTB)</td>
                                             <td>05 / 2021</td>
                                             <td>19-08-2021</td>
                                             <td>Pendirian</td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN RESTORASI DAN PERLINDUNGAN KONSUMEN</td>
+                                            <td>RESTORASI DAN PERLINDUNGAN KONSUMEN</td>
                                             <td>08 / 2021</td>
                                             <td>10-03-2021</td>
                                             <td>Pendirian</td>
@@ -1109,7 +1115,7 @@
                                         <!--2020-->
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN SANGGAR CAHAYO AMEH (SCA)</td>
+                                            <td>SANGGAR CAHAYO AMEH (SCA)</td>
                                             <td>03 / 2020</td>
                                             <td>03-03-2020</td>
                                             <td>Pendirian</td>
@@ -1117,7 +1123,7 @@
                                         <!--2019-->
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN GERAKAN PEMUDA PEDULI KECAMATAN PALEMBAYAN (GEPPKP)</td>
+                                            <td>GERAKAN PEMUDA PEDULI KECAMATAN PALEMBAYAN</td>
                                             <td>08 / 2019</td>
                                             <td>14-11-2019</td>
                                             <td>Pendirian</td>
@@ -1125,7 +1131,7 @@
                                         <!--2018-->
                                         <tr>
                                             <td></td>
-                                            <td>PERKUMPULAN KOMUNITAS PENGEMUDI PARIWISATA BUKITTINGGI (KPPB)</td>
+                                            <td>KOMUNITAS PENGEMUDI PARIWISATA BUKITTINGGI (KPPB)</td>
                                             <td>01 / 2018</td>
                                             <td>06-12-2018</td>
                                             <td>Pendirian</td>
@@ -1152,24 +1158,25 @@
             </div>
             <div class="page-footer-mid">
                 <h4>Menu</h4>
-                <a href="https://revchester.github.io/myportfolio/">HOME</a>
-                <a href="https://revchester.github.io/myportfolio/skill">SKILL</a>
-                <a href="https://revchester.github.io/myportfolio/experiences">EXPERIENCES</a>
-                <a href="https://revchester.github.io/myportfolio/education">EDUCATION</a>
-                <a href="https://revchester.github.io/myportfolio/certificate">CERTIFICATE</a>
-                <a href="https://revchester.github.io/myportfolio/project">PROJECT</a>
+                <a href="./index.html">HOME</a>
+                <a href="./skill.html">SKILL</a>
+                <a href="./experiences.html">EXPERIENCES</a>
+                <a href="./education.html">EDUCATION</a>
+                <a href="./certificate.html">CERTIFICATE</a>
+                <a href="./project.html">PROJECT</a>
             </div>
             <div class="page-footer-mid">
                 <h4>Project</h4>
-                <a href="https://revchester.github.io/myportfolio/project-jda">JDA</a>
-                <a href="https://revchester.github.io/myportfolio/project-legal">LEGAL</a>
-                <a href="https://revchester.github.io/myportfolio/project-ndt">NDT</a>
+                <a href="./project-jda.html">JDA</a>
+                <a href="./project-legal.html">LEGAL</a>
+                <a href="./project-ndt.html">NDT</a>
             </div>
             <div class="footer-socmed">
                 <h4>Sosial Media</h4>
                 <div class="social-links">
                     <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank" class="tooltip" data-title="Facebook" data-description="Akun sosial media Facebook."><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank" class="tooltip" data-title="Linkedin" data-description="Akun sosial media Linkedin - situs pencari kerja."><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/lonewolf4eternity/" target="_blank" class="tooltip" data-title="Instagram" data-description="Akun sosial media Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://github.com/revchester" target="_blank" class="tooltip" data-title="Github" data-description="Akun penyimpanan code."><i class="fa-brands fa-github"></i></a>
                     <a href="mailto:amalrahmanduya@gmail.com" target="_blank" class="tooltip" data-title="G-mail" data-description="Mari berikirim e-mail dengan saya."><i class="fa-brands fa-google"></i></a>
                     <a href="https://wa.me/6282173761982" target="_blank" class="tooltip" data-title="WhatsApp" data-description="Hallo..  ingin berbincang dengan saya? Silahkan chat ke nomor ini. Terima Kasih."><i class="fa-brands fa-whatsapp"></i></a>
