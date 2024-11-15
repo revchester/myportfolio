@@ -1372,7 +1372,7 @@ td:nth-child(1) {
 th:nth-child(2),
 td:nth-child(2) {
     min-width: 150px; /* Kolom kedua (misalnya, Nama File) */
-    padding-right: 100px;
+    padding-right: 20px;
     padding-left: 20px;
 }
 
@@ -2043,6 +2043,60 @@ th {
                 5px 5px 10px rgba(0, 0, 0, 0.5),  /* Bayangan di kanan */
                 0px 10px 10px rgba(0, 0, 0, 0.5); /* Bayangan di bawah */
 }
+
+.pagination-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color: #b37700;
+}
+
+.pagination-container button {
+    background-color: black;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.pagination-container button:hover {
+    background-color: goldenrod;
+    border: 2px solid red;
+}
+
+.pagination-container span {
+    margin: 0 10px;
+}
+
+#paginationNumbers {
+    display: flex;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+#paginationNumbers button {
+    background-color: black;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#paginationNumbers button:hover {
+    background-color: goldenrod;
+    border: 2px solid red;
+}
+
+#paginationNumbers button.active {
+    background-color: darkorange;
+}
+
+
 
 /*  --------------------------- MEDDIA QUERY --------------------------- */
 @media (max-width: 768px) {

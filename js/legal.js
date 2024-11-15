@@ -85,3 +85,142 @@ document.getElementById('searchInput').addEventListener('input', function() {
         document.querySelector('.clear-icon').style.display = 'none'; // Sembunyikan ikon xmark
     }
 });
+
+
+//  pagination
+
+/*
+var currentPage = 1;
+var rowsPerPage = 10;
+
+function displayPage(tabId, page) {
+    var table = document.querySelector(`#${tabId} table tbody`);
+    var rows = table.getElementsByTagName('tr');
+    var totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+
+    // Hide all rows
+    for (var i = 0; i < rows.length; i++) {
+        rows[i].style.display = "none";
+    }
+
+    // Display the rows for the current page
+    for (var i = (page - 1) * rowsPerPage; i < (page * rowsPerPage) && i < rows.length; i++) {
+        rows[i].style.display = "";
+    }
+
+    // Update the page info
+    document.getElementById('pageInfo').textContent = `Page ${page} of ${totalPages}`;
+    currentPage = page;
+}
+
+function changePage(direction) {
+    var activeTab = document.querySelector('.tab-content[style="display: block;"]').id;
+    displayPage(activeTab, currentPage + direction);
+}
+
+// Call the function when the page is loaded or when a new tab is shown
+document.addEventListener("DOMContentLoaded", function () {
+    displayPage('pt', 1);  // Display the first page of the 'pt' tab by default
+});
+
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', function() {
+        displayPage(this.getAttribute('data-tab-id'), 1);  // Reset to first page on tab change
+    });
+});
+
+// Panggil fungsi displayPage ketika tab berubah
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', function() {
+        var tabId = this.getAttribute('onclick').match(/'(.*?)'/)[1]; // Dapatkan ID tab dari onclick
+        displayPage(tabId, 1);  // Reset pagination ke halaman 1 setiap kali tab berubah
+    });
+});
+*/
+
+var currentPage = 1;
+var rowsPerPage = 10;
+
+function displayPage(tabId, page) {
+    var table = document.querySelector(`#${tabId} table tbody`);
+    if (!table) return;
+
+    var rows = table.getElementsByTagName('tr');
+    var totalPages = Math.ceil(rows.length / rowsPerPage);
+
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+
+    // Hide all rows
+    for (var i = 0; i < rows.length; i++) {
+        rows[i].style.display = "none";
+    }
+
+    // Display the rows for the current page
+    for (var i = (page - 1) * rowsPerPage; i < (page * rowsPerPage) && i < rows.length; i++) {
+        rows[i].style.display = "";
+    }
+
+    // Update the page info
+    document.getElementById('pageInfo').textContent = `Halaman ${page} dari ${totalPages}`;
+    currentPage = page;
+
+    // Generate pagination numbers
+    displayPaginationNumbers(tabId, totalPages);
+
+    // Update the disabled state of the Previous and Next buttons
+    document.getElementById('prevPage').disabled = currentPage === 1;
+    document.getElementById('nextPage').disabled = currentPage === totalPages;
+}
+
+function displayPaginationNumbers(tabId, totalPages) {
+    var paginationContainer = document.getElementById('paginationNumbers');
+    paginationContainer.innerHTML = '';  // Clear previous pagination
+
+    var maxVisiblePages = 5;
+    var startPage = Math.max(currentPage - Math.floor(maxVisiblePages / 2), 1);
+    var endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
+
+    // Adjust startPage if endPage is at the last part of totalPages
+    if (endPage - startPage < maxVisiblePages - 1) {
+        startPage = Math.max(endPage - maxVisiblePages + 1, 1);
+    }
+
+    // Display page numbers
+    for (let i = startPage; i <= endPage; i++) {
+        addPageButton(paginationContainer, tabId, i);
+    }
+}
+
+function addPageButton(paginationContainer, tabId, pageNumber) {
+    var pageButton = document.createElement('button');
+    pageButton.textContent = pageNumber;
+    pageButton.onclick = function() {
+        displayPage(tabId, pageNumber);
+    };
+    if (pageNumber === currentPage) {
+        pageButton.classList.add('active');  // Mark active page
+    }
+    paginationContainer.appendChild(pageButton);
+}
+
+function changePage(direction) {
+    var activeTab = document.querySelector('.tab-content[style="display: block;"]').id;
+    displayPage(activeTab, currentPage + direction);
+}
+
+// Function to load the first page when the page is loaded or when the tab is changed
+document.addEventListener("DOMContentLoaded", function () {
+    displayPage('pt', 1);  // Load the first page by default
+
+    // Add event listener for each tab button
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function() {
+            var tabId = this.getAttribute('onclick').match(/'(.*?)'/)[1];
+            displayPage(tabId, 1);  // Reset to the first page when the tab is changed
+        });
+    });
+});
