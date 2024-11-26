@@ -773,7 +773,8 @@ section {
 footer {
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
+    box-sizing: border-box;
     background-image: url(../image/wallpaper/w-10.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -784,22 +785,29 @@ footer {
 }
 
 .page-footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px; /* Memperbaiki kesalahan penulisan '5x' menjadi '5px' */
-    padding: 20px;
-    margin: 20px auto;
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
-.page-footer-left {
-    display: flex;
-    text-align: left;
+.page-footer-left {/*
+    display: flex;*/
+    text-align: left;/*
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap;
-    width: 350px;
+    flex-wrap: wrap;*/
+    width: auto;
     background-color: rgba(4, 4, 4, 0.5);
     padding: 20px;
+}
+
+.page-footer-left h4 {
+    text-align: center;
 }
 
 .page-footer-left p {
@@ -808,7 +816,7 @@ footer {
 }
 
 .page-footer-mid {
-    width: 190px;
+    width: 150px;
     padding: 20px; /* Ruang di dalam kotak */
     border-radius: 10px; /* Sudut melengkung */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
@@ -835,7 +843,7 @@ footer {
 }
 
 .footer-socmed {
-    width: 390px;
+    width: auto;
     margin: 0 auto;
     text-align: center; /* Menyelaraskan teks dan ikon ke tengah */
     padding: 20px; /* Memberi padding di sekitar konten */
@@ -860,8 +868,9 @@ footer {
 }
 
 .social-links a:hover {
-    color: #0056b3; /* Warna ikon saat dihover */
-    background: linear-gradient(to bottom, rgb(172, 121, 2), rgb(35, 25, 1));
+    color: #0056b3; /* Warna ikon saat dihover 
+    background: linear-gradient(to bottom, rgb(172, 121, 2), rgb(35, 25, 1));*/
+    transform: scale(1.1);
 }
 
 .powered-by {
@@ -872,12 +881,12 @@ footer {
     padding-left: 5px;
     padding-top: 0;
     background-color: transparent;
-    text-align: left;
+    text-align: center;
 }
 
 .powered-by img {
     height: 60px;
-    width: 110px;
+    width: auto;
     margin: 0;
     padding: 5px;
     border: 1px solid red;
