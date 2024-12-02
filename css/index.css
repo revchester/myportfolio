@@ -433,6 +433,21 @@ section {
     border: 3px solid red;
 }
 
+.section-content-2col-item {
+    background-color: yellowgreen;
+    background-image: url(../image/wallpaper/w-002.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 20px;
+    line-height: 1.25;
+    flex: 1;
+    flex-direction: column; /* Menyusun konten secara vertikal */
+    justify-content: space-between; /* Agar konten tersebar antara atas dan bawah */
+    height: max-content; /* Atur tinggi kotak sesuai kebutuhan */
+}
+
 .section-content-2col-left {
     background-color: yellowgreen;
     background-image: url(../image/wallpaper/w-002.jpg);
