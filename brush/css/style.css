@@ -1,0 +1,788 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:#2F3238;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-weight:300;
+	font-size:12px;
+    line-height:28px;
+    padding-top: 60px;
+}
+
+a {
+	color:#DE5E60;
+	text-decoration: none;
+	cursor: pointer;
+	
+	-webkit-transition: color 0.1s linear 0s;	
+	   -moz-transition: color 0.1s linear 0s;
+		 -o-transition: color 0.1s linear 0s;
+		    transition: color 0.1s linear 0s;
+}
+
+a:hover,
+a:active,
+a:focus{
+	outline: 0;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+a img {
+	border: none;
+}
+
+a > img {
+	vertical-align: bottom;	
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 42px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+h5 {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+h6 {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+ul, ol {
+    margin: 0 0 20px 20px;
+}
+
+strong {
+    font-weight: 500;
+    color: #ff2a2a;
+}
+
+span {
+    font-weight: 300;
+    color: #ffb42a;
+}
+
+p {
+    margin: 0 0 30px;
+}
+
+hr {
+    border-style: groove;
+    border-color: #ced0d6;
+    border-top: 5px solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin: 50px 0;	
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.datetime {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    min-width: 200px;
+    font-family: "LED";
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: inherit;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+    z-index: -90;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%;
+    height: 800px;
+    object-fit: fill;
+}
+
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/*  scroll bar start    */
+/* Mengatur lebar scrollbar pada elemen */
+::-webkit-scrollbar {
+    width: 2px;  /* Lebar scrollbar vertikal */
+    height: 2px; /* Lebar scrollbar horizontal */
+}
+
+/* Mengatur warna track (jalur) scrollbar */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Warna track */
+}
+
+/* Mengatur warna dan tampilan thumb (pegangan) scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna thumb */
+    border-radius: 10px;  /* Membuat sudutnya membulat */
+}
+
+/* Scrollbar untuk browser non-WebKit */
+.scrollbar {
+    scrollbar-width: thin; /* Untuk Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+/*  scroll bar ends     */
+
+/* Responsive Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: #DE5E60;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a:focus::after {
+    transform: scaleX(1);
+}
+
+/*
+.nav-menu a:focus {
+    outline: none;
+    color: #ffffff;
+}
+
+.nav-menu a:hover {
+    color: #e4d4d4;
+}
+*/
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Hide datetime on mobile */
+@media (max-width: 768px) {
+    .datetime {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Certification Section */
+/*
+.certification {
+    padding: 30px;
+    background: #1a1a1a;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.certification .certificate-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.certificate-category {
+    width: 200px;
+    background: #292727;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.certificate-category h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.certificate-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certificate-category ul li button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.certificate-category ul li button:hover {
+    background: #666;
+}
+
+.certificate-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.certificate-item {
+    width: 225px;
+    height: 300px;
+    background-color: #383434;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+.certificate-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.certificate-item:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.certificate-item:hover .certificate-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none;
+    position: absolute;
+}
+*/
+
+/* Styling Umum untuk Sertifikat dengan Latar Gelap */
+.certification {
+    padding: 30px 20px;
+    background-color: #2F3238; /* Warna gelap untuk latar belakang */
+    color: #ecf0f1; /* Warna teks terang */
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.certification h2 {
+    font-size: 2.8rem;
+    color: #ecf0f1;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: none;
+    letter-spacing: 2px;
+}
+
+/* Layout Sertifikat */
+.certificate-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Kategori Sertifikat (15% Lebar Layar) */
+.certificate-category {
+    /*
+    background-color: #7F8289; *//* Warna kategori sedikit lebih terang dari latar */
+    background-color: inherit;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    flex: 0 0 25%;
+    text-align: center;
+    cursor: pointer;
+    height: max-content;
+}
+
+.certificate-category h3 {
+    font-size: 1.6rem;
+    color: #ecf0f1;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.certificate-category ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.certificate-category li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+.certificate-category button {
+    /*
+    background-color: #3C3F45;*/
+    background-color: inherit;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.certificate-category button:hover {
+    background-color: #DE5E60;
+    transform: scale(1.05);
+}
+
+/* Efek saat kategori diklik */
+.certificate-category.active {
+    background-color: #1abc9c; /* Warna aktif */
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sertifikat (73% Lebar Layar) */
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 30px;
+    width: 73%; /* 73% untuk konten gambar */
+}
+
+.certificate-item {
+    position: relative;
+    max-width: 280px;
+    max-height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item img {
+    width: 280px;
+    height: 200px;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.certificate-caption {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.963);
+    color: #ecf0f1;
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.2;
+    opacity: 0; /* Caption disembunyikan */
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Hover Effect untuk Sertifikat */
+.certificate-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-item:hover .certificate-caption {
+    opacity: 1; /* Caption muncul saat hover */
+
+    width: 280px;
+    height: 200px;
+
+    filter: alpha(opacity=100);
+	
+	-webkit-transition: all 450ms ease-out 0s;	
+	   -moz-transition: all 450ms ease-out 0s;
+		 -o-transition: all 450ms ease-out 0s;
+		    transition: all 450ms ease-out 0s;
+	
+    -webkit-transform: rotateY(360deg);
+	   -moz-transform: rotateY(360deg);
+		-ms-transform: rotateY(360deg);
+		 -o-transform: rotateY(360deg);
+			transform: rotateY(360deg);
+            /*
+	-webkit-transform: rotateY(360deg) scale(0.5,0.5);
+	   -moz-transform: rotateY(360deg) scale(0.5,0.5);
+		-ms-transform: rotateY(360deg) scale(0.5,0.5);
+		 -o-transform: rotateY(360deg) scale(0.5,0.5);
+			transform: rotateY(360deg) scale(0.5,0.5);*/
+}
+
+/* Responsif untuk Tablet */
+@media (max-width: 1024px) {
+    .certificate-layout {
+        flex-direction: column;
+    }
+
+    .certificate-category {
+        margin-bottom: 30px;
+        flex: 1 1 100%;
+    }
+
+    .certificate-container {
+        width: 100%;
+    }
+}
+
+/* Responsif untuk Smartphone */
+@media (max-width: 768px) {
+    .certificate-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Modal full lebar layar */
+    height: 100vh; /* Modal full tinggi layar */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Kontainer gambar dalam modal */
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gambar dalam modal */
+.modal-content img {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Efek transisi saat mengganti gambar */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Zoom Mode */
+.zoomed {
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    transform: scale(2);
+    cursor: grab;
+}
+
+.zoomed:active {
+    cursor: grabbing;
+}
+
+/* Tombol Close */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff5f5f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.close-modal:hover {
+    background: #ff2a2a;
+}
+
+/* Tombol Navigasi */
+#prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+#prev-btn { left: 20px; }
+#next-btn { right: 20px; }
+
+#prev-btn:hover, #next-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Area Deskripsi */
+#modal-description {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 80%;
+    text-align: center;
+}
+
+.zoomed {
+    transition: transform 0.3s ease-in-out;
+    cursor: grab;
+}
+
+.zoomed:active {
+    cursor: grabbing;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.certificate-category button {
+    background-color: inherit;
+    color: #7F8289;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.certificate-category button:hover {
+    background-color: #ff5f5f;
+    color: beige;
+}
+
+.certificate-category button.active {
+    background-color: inherit;
+    color: #ff5f5f;
+    border: 1px solid #0056b3;
+}
