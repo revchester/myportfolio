@@ -1,0 +1,312 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #141e30, #243b55);
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+}
+
+/* Kontainer Utama */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ============================= */
+/*         KALENDER              */
+/* ============================= */
+.calendar {
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.month-year {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#month {
+    color: #00ffb7;
+}
+
+#year {
+    color: #c8ff00;
+}
+
+.day-box {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#day {
+    color: #ff0;
+    font-size: calc(8vw + 5vh);
+}
+
+#weekday {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0ff;
+}
+
+/* ============================= */
+/*         JAM DIGITAL           */
+/* ============================= */
+
+/*
+.digital-clock {
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 3.2em;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px red;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    color: #ff0000;
+}
+*/
+
+/*
+.digital-clock {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ff0000;
+    display: flex;
+    border-radius: 2rem;
+    user-select: none;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    border: 0.5rem solid #2d2d2d;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+.week {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    color: #2d2d2d;
+    font-weight: bold;
+}
+
+.week .active {
+    color: #ff0000;
+}
+
+.time {
+    font-family: "LED";
+}
+
+.hour,
+.min,
+.dot {
+    display: inline-block;
+    font-size: 9rem;
+}
+
+.min {
+    display: math;
+}
+
+.sec {
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 0;
+    display: block;
+}
+
+.invisible {
+    visibility: hidden;
+}
+*/
+
+.digital-clock {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ff0000;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    user-select: none;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    border: 0.5rem solid #2d2d2d;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.week {
+    display: flex;
+    flex-direction: column;/*
+    justify-content: center;*/
+    align-items: flex-start;
+    text-align: left;
+    width: 4rem;
+    color: #2d2d2d;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.week .active {
+    color: #ff0000;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  /* Posisikan elemen ke kanan */
+    position: relative;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    font-family: "LED";
+}
+
+.hour,
+.min,
+.dot {
+    display: inline-block;
+    font-size: 9rem;
+}
+
+.sec {
+    font-family: "LED";
+    font-size: 3rem;
+    position: absolute;
+    bottom: -1.5rem; /* Geser ke bawah */
+    right: 0; /* Tetap di sisi kanan */
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/* ============================= */
+/*         TOMBOL NAVIGASI       */
+/* ============================= */
+.btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 24px;
+    background: rgba(2, 116, 2, 0.8);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    transition: 0.3s ease-in-out;
+    width: 250px;
+    text-align: center;
+}
+
+.btn-left {
+    left: 10%;
+}
+
+.btn-right {
+    right: 10%;
+}
+
+.btn:hover {
+    background: rgb(0, 59, 0);
+    box-shadow: 0 0 15px rgba(0, 200, 0, 1);
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* ============================= */
+/*         TOOLTIP EFFECT        */
+/* ============================= */
+.tooltip {
+    position: fixed; /* Agar selalu muncul di sudut kanan bawah */
+    right: 40px;
+    bottom: 40px;
+    width: max-content;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9em;
+    z-index: 100;
+    opacity: 0; /* Tooltip tersembunyi secara default */
+    visibility: hidden;
+    transform: translateX(-50px); /* Mulai dari posisi lebih ke kiri */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip muncul dengan efek slide-in dari kiri ke kanan & fade-in */
+.btn-left:hover + .tooltip,
+.btn-right:hover + .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Geser ke kanan ke posisi normal */
+}
+
+/* ============================= */
+/*        TOOLTIP RESPONSIVE     */
+/* ============================= */
+@media (max-width: 768px) {
+    .tooltip {
+        max-width: 200px;
+        font-size: 0.8em;
+        padding: 8px;
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+/* ============================= */
+/*         RESPONSIVE            */
+/* ============================= */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .calendar, .digital-clock {
+        width: 90%;
+    }
+
+    .btn {
+        width: 160px;
+        font-size: 1em;
+    }
+
+    .btn-left {
+        left: 5%;
+    }
+
+    .btn-right {
+        right: 5%;
+    }
+
+    .tooltip {
+        width: 120px;
+    }
+}
