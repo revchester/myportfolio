@@ -177,10 +177,15 @@ body {
     position: relative;
 }
 
+@font-face {
+    font-family: 'DS-DIGI';
+    src: url(../font/DS-DIGI.TTF);
+}
 .time {
     display: flex;
-    align-items: center;
-    font-family: "LED";
+    align-items: center;/*
+    font-family: "LED";*/
+    font-family: 'DS-DIGI', monospace;
 }
 
 .hour,
@@ -191,7 +196,9 @@ body {
 }
 
 .sec {
-    font-family: "LED";
+    /*
+    font-family: "LED";*/
+    font-family: 'DS-DIGI', monospace;
     font-size: 3rem;
     position: absolute;
     bottom: -1.5rem; /* Geser ke bawah */
