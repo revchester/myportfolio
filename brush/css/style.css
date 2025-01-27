@@ -108,7 +108,7 @@ hr {
     border-bottom: none;
     border-left: none;
     border-right: none;
-    margin: 50px 0;	
+    margin: 5px 0;
 }
 
 .header {
@@ -448,7 +448,7 @@ hr {
 /* Styling Umum untuk Sertifikat dengan Latar Gelap */
 .certification {
     padding: 30px 20px;
-    background-color: #2F3238; /* Warna gelap untuk latar belakang */
+    background-color: #1f2125; /* Warna gelap untuk latar belakang */
     color: #ecf0f1; /* Warna teks terang */
 }
 
@@ -477,7 +477,7 @@ hr {
 .certificate-category {
     /*
     background-color: #7F8289; *//* Warna kategori sedikit lebih terang dari latar */
-    background-color: inherit;
+    background-color: #2F3238;
     padding: 20px 15px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -571,7 +571,7 @@ hr {
     left: 0;
     right: 0;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.963);
+    background-color: rgba(37, 35, 35, 0.963);
     color: #ecf0f1;
     font-size: 0.8rem;
     text-align: left;
@@ -819,7 +819,16 @@ footer {
 }
 
 .page-footer-mid {
-    flex: 0 0 15%; /* Hanya 5% dari lebar footer */
+    flex: 0 0 5%; /* Hanya 5% dari lebar footer 
+    background-color: #2F3238;
+    padding: 30px;
+    border-radius: 5%;*/
+}
+
+.page-footer-left {
+    background-color: #2F3238;
+    padding: 30px;
+    border-radius: 5%;
 }
 
 /* Pastikan teks dalam bagian kiri tetap rata kiri */
@@ -859,6 +868,9 @@ footer {
 /* SOCIAL MEDIA */
 .footer-socmed {
     text-align: center;
+    background-color: #2F3238;
+    padding: 30px;
+    border-radius: 5%;
 }
 
 .social-links {
@@ -916,7 +928,7 @@ footer {
 
 .powered-by img {
     width: auto;
-    height: 30px; /* Sesuai permintaan */
+    height: 40px; /* Sesuai permintaan */
     object-fit: contain;
     border-radius: 5px;
     transition: transform 0.3s ease, filter 0.3s;
