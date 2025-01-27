@@ -497,7 +497,8 @@ footer a:hover {
 
     /* Sembunyikan .page-footer-mid */
     .page-footer-mid {
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
     .footer-socmed {
