@@ -326,6 +326,15 @@ footer a:hover {
     padding: 50px 20px;
 }
 
+.project-titile {
+    width: 500px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-bottom: 5px solid #00bcd4;
+}
+
 .project-container {
     display: flex;
     flex-wrap: wrap;
