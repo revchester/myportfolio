@@ -328,7 +328,7 @@ footer {
     margin: 50px auto;
 }
 
-.page-footer-left, .footer-socmed {
+.page-footer-left {
     max-width: 400px;
     text-align: left;
 }
@@ -340,13 +340,16 @@ footer {
 
 .page-footer-mid a {
     display: block;
-    color: #e71919;
     text-decoration: none;
     margin-bottom: 10px;
 }
 
 .page-footer-mid a:hover {
     color: #f7fd5d;
+}
+
+.footer-socmed {
+    max-width: 450px;
 }
 
 .footer-socmed .social-links {
