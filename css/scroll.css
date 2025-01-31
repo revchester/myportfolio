@@ -1,0 +1,38 @@
+/*  scroll bar start    */
+/* Mengatur lebar scrollbar pada elemen */
+::-webkit-scrollbar {
+    width: 2px;  /* Lebar scrollbar vertikal */
+    height: 2px; /* Lebar scrollbar horizontal */
+}
+
+/* Mengatur warna track (jalur) scrollbar */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Warna track */
+}
+
+/* Mengatur warna dan tampilan thumb (pegangan) scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna thumb */
+    border-radius: 10px;  /* Membuat sudutnya membulat */
+}
+
+/* Scrollbar untuk browser non-WebKit */
+.scrollbar {
+    scrollbar-width: thin; /* Untuk Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+/*  scroll bar ends     */

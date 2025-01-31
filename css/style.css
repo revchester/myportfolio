@@ -11,9 +11,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #141e30, #243b55);
+    background: linear-gradient(to right, yellowgreen, yellow);
     font-family: 'Orbitron', sans-serif;
-    color: #fff;
+    color: wheat;
 }
 
 /* Kontainer Utama */
@@ -32,8 +32,8 @@ body {
     border-radius: 10px;
     width: 400px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px violet;
+    background: rgba(64, 224, 208, 0.5);
 }
 
 .month-year {
@@ -42,11 +42,11 @@ body {
 }
 
 #month {
-    color: #00ffb7;
+    color: tomato;
 }
 
 #year {
-    color: #c8ff00;
+    color: thistle;
 }
 
 .day-box {
@@ -56,98 +56,25 @@ body {
 }
 
 #day {
-    color: #ff0;
+    color: teal;
     font-size: calc(8vw + 5vh);
 }
 
 #weekday {
     font-size: 1.5em;
     font-weight: bold;
-    color: #0ff;
+    color: tan;
 }
-
-/* ============================= */
-/*         JAM DIGITAL           */
-/* ============================= */
-
-/*
-.digital-clock {
-    width: 400px;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 3.2em;
-    font-weight: bold;
-    font-family: 'Orbitron', sans-serif;
-    text-shadow: 0 0 10px red;
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
-    color: #ff0000;
-}
-*/
-
-/*
-.digital-clock {
-    background: rgba(0, 0, 0, 0.6);
-    color: #ff0000;
-    display: flex;
-    border-radius: 2rem;
-    user-select: none;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
-    border: 0.5rem solid #2d2d2d;
-    padding: 0 1rem;
-    justify-content: space-between;
-}
-
-.week {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    color: #2d2d2d;
-    font-weight: bold;
-}
-
-.week .active {
-    color: #ff0000;
-}
-
-.time {
-    font-family: "LED";
-}
-
-.hour,
-.min,
-.dot {
-    display: inline-block;
-    font-size: 9rem;
-}
-
-.min {
-    display: math;
-}
-
-.sec {
-    font-size: 12px;
-    line-height: 1;
-    margin-top: 0;
-    display: block;
-}
-
-.invisible {
-    visibility: hidden;
-}
-*/
 
 .digital-clock {
-    background: rgba(0, 0, 0, 0.6);
-    color: #ff0000;
+    background: rgba(70, 131, 180, 0.603);
+    color: springgreen;
     display: flex;
     align-items: center;
     border-radius: 2rem;
     user-select: none;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
-    border: 0.5rem solid #2d2d2d;
+    box-shadow: 0 0 15px rgba(255, 250, 250, 0.6);
+    border: 0.5rem solid slategrey;
     padding: 1rem;
     justify-content: space-between;
 }
@@ -159,13 +86,13 @@ body {
     align-items: flex-start;
     text-align: left;
     width: 4rem;
-    color: #2d2d2d;
+    color: slateblue;
     font-weight: lighter;
     font-size: smaller;
 }
 
 .week .active {
-    color: #ff0000;
+    color: skyblue;
     font-weight: bolder;
     font-size: larger;
 }
@@ -217,13 +144,13 @@ body {
     top: 50%;
     transform: translateY(-50%);
     padding: 12px 24px;
-    background: rgba(2, 116, 2, 0.8);
-    color: white;
+    background: rgba(192, 192, 192, 0.8);
+    color: sienna;
     font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    box-shadow: 0 0 10px rgba(255, 245, 238, 0.8);
     transition: 0.3s ease-in-out;
     width: 250px;
     text-align: center;
@@ -238,8 +165,8 @@ body {
 }
 
 .btn:hover {
-    background: rgb(0, 59, 0);
-    box-shadow: 0 0 15px rgba(0, 200, 0, 1);
+    background: rgba(46, 139, 86, 0.4);
+    box-shadow: 0 0 15px rgba(244, 165, 96, 0.5);
     transform: translateY(-50%) scale(1.05);
 }
 
@@ -253,7 +180,7 @@ body {
     width: max-content;
     max-width: 300px;
     background: rgba(0, 0, 0, 0.85);
-    color: #fff;
+    color: salmon;
     text-align: center;
     border-radius: 6px;
     padding: 10px;
@@ -263,7 +190,7 @@ body {
     visibility: hidden;
     transform: translateX(-50px); /* Mulai dari posisi lebih ke kiri */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(139, 69, 19, 0.3);
 }
 
 /* Tooltip muncul dengan efek slide-in dari kiri ke kanan & fade-in */

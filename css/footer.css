@@ -1,0 +1,161 @@
+/* ======= FOOTER ======= */
+footer {
+    background-color: #1a1a1a;
+    padding: 30px 0;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+
+.page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: left;
+}
+
+.page-footer-left {
+    flex: 1;
+    max-width: 350px;
+    padding: 10;
+    line-height: 1.5;
+}
+
+.footer-socmed {
+    flex: 1;
+    min-width: 250px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.page-footer-mid {
+    flex: 1;
+    max-width: 150px;
+    padding: 10px;
+}
+
+.page-footer-mid a {
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: block;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.page-footer-left h4, 
+.page-footer-mid h4, 
+.footer-socmed h4 {
+    margin-bottom: 10px;
+}
+
+.page-footer-left p {
+    margin: 15px auto;
+}
+.page-footer-left a {
+    text-decoration: none;
+    margin: 5px 0;
+    transition: 0.3s;
+    font-size: larger;
+}
+
+/* Sosial Media */
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    height: 100px;
+}
+
+.social-links a {
+    margin-top: 25px;
+    padding: 5px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+}
+
+.tooltip::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Powered by */
+.powered-by {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.powered-by img {
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.powered-by img:hover {
+    transform: scale(1.1);
+}
+
+/* Copyright */
+footer hr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    width: 80%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .menu {
+        flex-direction: column;
+    }
+
+    header .menu li {
+        margin: 5px 0;
+    }
+
+    .page-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
