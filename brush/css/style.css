@@ -9,9 +9,9 @@ html {
 }
 
 body {
-    background:#2F3238;
+    background: royalblue;
     font-family: 'Orbitron', sans-serif;
-    color: #fff;
+    color: rosybrown;
     font-weight:300;
 	font-size:12px;
     line-height:28px;
@@ -19,7 +19,7 @@ body {
 }
 
 a {
-	color:#DE5E60;
+	color: red;
 	text-decoration: none;
 	cursor: pointer;
 	
@@ -33,7 +33,7 @@ a:hover,
 a:active,
 a:focus{
 	outline: 0;
-	color:#FFFFFF;
+	color: rebeccapurple;
 	text-decoration:none;
 }
 
@@ -89,21 +89,17 @@ ul, ol {
 
 strong {
     font-weight: 500;
-    color: #ff2a2a;
+    color: purple;
 }
 
 span {
     font-weight: 300;
-    color: #ffb42a;
-}
-
-p {
-    margin: 0 0 30px;
+    color: powderblue;
 }
 
 hr {
     border-style: groove;
-    border-color: #ced0d6;
+    border-color: plum;
     border-top: 5px solid;
     border-bottom: none;
     border-left: none;
@@ -142,7 +138,7 @@ hr {
 
 .datetime {
     font-size: 24px;
-    color: #fff;
+    color: pink;
     font-weight: 400;
     text-align: center;
     min-width: 200px;/*
@@ -163,7 +159,7 @@ hr {
 }
 
 .nav-menu a:hover {
-    color: inherit;
+    color: peru;
 }
 
 .slideshow {
@@ -193,45 +189,6 @@ hr {
     to { opacity: 1; }
 }
 
-/*  scroll bar start    */
-/* Mengatur lebar scrollbar pada elemen */
-::-webkit-scrollbar {
-    width: 2px;  /* Lebar scrollbar vertikal */
-    height: 2px; /* Lebar scrollbar horizontal */
-}
-
-/* Mengatur warna track (jalur) scrollbar */
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1); /* Warna track */
-}
-
-/* Mengatur warna dan tampilan thumb (pegangan) scrollbar */
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5); /* Warna thumb */
-    border-radius: 10px;  /* Membuat sudutnya membulat */
-}
-
-/* Scrollbar untuk browser non-WebKit */
-.scrollbar {
-    scrollbar-width: thin; /* Untuk Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-/*  scroll bar ends     */
-
 /* Responsive Navigation Menu */
 .nav-menu {
     display: flex;
@@ -259,7 +216,7 @@ hr {
     bottom: -3px;
     width: 100%;
     height: 3px;
-    background: #DE5E60;
+    background: peachpuff;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -268,17 +225,6 @@ hr {
 .nav-menu a:focus::after {
     transform: scaleX(1);
 }
-
-/*
-.nav-menu a:focus {
-    outline: none;
-    color: #ffffff;
-}
-
-.nav-menu a:hover {
-    color: #e4d4d4;
-}
-*/
 
 /* Hamburger Menu */
 .menu-toggle {
@@ -291,7 +237,7 @@ hr {
 .menu-toggle div {
     width: 30px;
     height: 4px;
-    background-color: white;
+    background-color: papayawhip;
     border-radius: 5px;
 }
 
@@ -327,129 +273,11 @@ hr {
     }
 }
 
-/* Certification Section */
-/*
-.certification {
-    padding: 30px;
-    background: #1a1a1a;
-    color: #fff;
-    min-height: 100vh;
-}
-
-.certification .certificate-layout {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: flex-start;
-}
-
-.certificate-category {
-    width: 200px;
-    background: #292727;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #444;
-}
-
-.certificate-category h3 {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.certificate-category ul {
-    list-style: none;
-    padding: 0;
-}
-
-.certificate-category ul li button {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 12px;
-    background-color: #444;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.certificate-category ul li button:hover {
-    background: #666;
-}
-
-.certificate-container {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-    gap: 15px;
-    padding: 15px;
-    justify-content: center;
-}
-
-.certificate-item {
-    width: 225px;
-    height: 300px;
-    background-color: #383434;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    position: relative;
-}
-
-.certificate-item img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.certificate-item:hover {
-    transform: scale(1.07);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.certificate-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: left;
-    font-size: 12px;
-    line-height: 1.3;
-    padding: 8px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.certificate-item:hover .certificate-caption {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.hidden {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    pointer-events: none;
-    position: absolute;
-}
-*/
-
 /* Styling Umum untuk Sertifikat dengan Latar Gelap */
 .certification {
     padding: 30px 20px;
     background-color: #1f2125; /* Warna gelap untuk latar belakang */
-    color: #ecf0f1; /* Warna teks terang */
+    color: palevioletred; /* Warna teks terang */
 }
 
 .container {
@@ -458,7 +286,7 @@ hr {
 
 .certification h2 {
     font-size: 2.8rem;
-    color: #ecf0f1;
+    color: paleturquoise;
     text-align: center;
     margin-bottom: 40px;
     text-transform: none;
@@ -490,7 +318,7 @@ hr {
 
 .certificate-category h3 {
     font-size: 1.6rem;
-    color: #ecf0f1;
+    color: palegreen;
     margin-bottom: 18px;
     font-weight: 600;
 }
@@ -504,16 +332,13 @@ hr {
 .certificate-category li {
     margin-bottom: 8px;
     font-size: 0.9rem;
-    color: #bdc3c7;
+    color: palegoldenrod;
 }
 
+
 .certificate-category button {
-    /*
-    background-color: #3C3F45;*/
     background-color: inherit;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
+    color: orchid;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 8px;
@@ -521,17 +346,28 @@ hr {
     width: 100%;
     margin-top: 5px;
     text-align: left;
+    border: 1px solid orangered;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .certificate-category button:hover {
-    background-color: #DE5E60;
+    background-color: orange;
     transform: scale(1.05);
+    color: olivedrab;
+}
+
+.certificate-category button.active {
+    background-color: inherit;
+    color: olive;
+    border: 1px solid oldlace;
 }
 
 /* Efek saat kategori diklik */
 .certificate-category.active {
-    background-color: #1abc9c; /* Warna aktif */
-    color: white;
+    background-color: navy; /* Warna aktif */
+    color: navajowhite;
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -572,7 +408,7 @@ hr {
     right: 0;
     padding: 20px;
     background-color: rgba(37, 35, 35, 0.963);
-    color: #ecf0f1;
+    color: moccasin;
     font-size: 0.8rem;
     text-align: left;
     line-height: 1.2;
@@ -705,8 +541,8 @@ hr {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: #ff5f5f;
-    color: #fff;
+    background: mistyrose;
+    color: mintcream;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
@@ -716,7 +552,7 @@ hr {
 }
 
 .close-modal:hover {
-    background: #ff2a2a;
+    background: midnightblue;
 }
 
 /* Tombol Navigasi */
@@ -725,7 +561,7 @@ hr {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.6);
-    color: #000;
+    color: mediumvioletred;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -748,7 +584,7 @@ hr {
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    color: mediumturquoise;
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
@@ -771,206 +607,4 @@ hr {
     position: absolute;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-}
-
-.certificate-category button {
-    background-color: inherit;
-    color: #7F8289;
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.certificate-category button:hover {
-    background-color: #ff5f5f;
-    color: beige;
-}
-
-.certificate-category button.active {
-    background-color: inherit;
-    color: #ff5f5f;
-    border: 1px solid #0056b3;
-}
-
-/* FOOTER */
-footer {
-    background: #101010;
-    padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Footer Container */
-.page-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 0;
-    gap: 30px;
-}
-
-/* Bagi 4 bagian */
-.page-footer-left,
-.page-footer-right,
-.page-footer-extra {
-    flex: 1; /* Bagian selain .page-footer-mid mendapatkan sisa space yang sama besar */
-}
-
-.page-footer-mid {
-    flex: 0 0 5%; /* Hanya 5% dari lebar footer 
-    background-color: #2F3238;
-    padding: 30px;
-    border-radius: 5%;*/
-}
-
-.page-footer-left {
-    background-color: #2F3238;
-    padding: 30px;
-    border-radius: 5%;
-}
-
-/* Pastikan teks dalam bagian kiri tetap rata kiri */
-.page-footer-left p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-/* Footer Title */
-.page-footer h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #00aaff;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-/* Footer Links */
-.page-footer a {
-    display: block;
-    font-size: 14px;
-    line-height: 1.8;
-    text-decoration: none;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-    text-align: left;
-}
-
-.page-footer a:hover {
-    transform: translateX(5px);
-}
-
-/* SOCIAL MEDIA */
-.footer-socmed {
-    text-align: center;
-    background-color: #2F3238;
-    padding: 30px;
-    border-radius: 5%;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding-top: 10px;
-}
-
-.social-links a {
-    font-size: 24px;
-    transition: transform 0.3s ease, color 0.3s;
-    position: relative;
-}
-
-.social-links a:hover {
-    transform: scale(1.2);
-}
-
-/* Tooltip */
-.tooltip {
-    position: relative;
-}
-
-.tooltip::before {
-    content: attr(data-title);
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.85);
-    padding: 6px 12px;
-    font-size: 12px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-
-.tooltip:hover::before {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* POWERED BY */
-.powered-by {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    gap: 15px;
-}
-
-.powered-by img {
-    width: auto;
-    height: 40px; /* Sesuai permintaan */
-    object-fit: contain;
-    border-radius: 5px;
-    transition: transform 0.3s ease, filter 0.3s;
-}
-
-.powered-by img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-}
-
-/* Copyright */
-footer hr {
-    border: 0;
-    height: 1px;
-    background: #444;
-    margin: 25px 0;
-}
-
-footer p {
-    font-size: 14px;
-    text-align: center;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .page-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .page-footer-left,
-    .page-footer-right,
-    .page-footer-extra,
-    .page-footer-mid {
-        flex: 1;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .social-links {
-        justify-content: center;
-    }
 }
