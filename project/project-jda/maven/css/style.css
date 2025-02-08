@@ -1,5 +1,573 @@
+/*  clock    *//*
+.datetime {
+    width: 100%;
+    background-color: darksalmon;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+}
+
+.clock {
+    width: 450px;
+    background-color: darkred;
+    color: darkorchid;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.inside {
+    width: 100%;
+    background-color: darkorange;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.days-of-week {
+    background-color: darkolivegreen;
+    color: darkmagenta;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1rem;
+    padding: 5px 0;
+    line-height: 1;
+    margin: 0;
+}
+
+.active {
+    color: darkkhaki;
+}
+
+.time {
+    font-size: 2.5rem;
+    margin-top: 0;
+    background-color: darkgrey;
+    color: darkgreen;
+    line-height: 1;
+}
+
+#ampm {
+    font-size: 1.5rem;
+    color: darkgoldenrod;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+    line-height: 1;
+    background-color: darkcyan;
+    color: darkblue;
+}
+
+.icon img {
+    width: 30px;
+}
+
+/*  clock end   */
+
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    color: indigo;
+}
+
+a:active {
+    color: indianred;
+}
+
+a:focus {
+    color: hotpink;
+}
+
+a:hover {
+    color: honeydew;
+}
+
+body {
+    background-color: #121212;
+    color: greenyellow;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin:0 0 20px 0;
+	font-weight:300;
+	line-height:1.5em;
+}
+
+h1{
+    color: green;
+	font-size:48px;
+}
+
+h2{
+    color: goldenrod;
+	font-size:36px;
+}
+
+h3{
+    color: gold;
+	font-size:24px;
+}
+
+h4{
+    color: ghostwhite;
+	font-size:20px;
+}
+
+h5{
+    color: gainsboro;
+	font-size:18px;
+}
+
+h6{
+    color: fuchsia;
+	font-size:16px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: #1e1e1e;
+    border-bottom: 2px solid forestgreen;
+    box-shadow: 0 2px 10px floralwhite;
+}
+
+.logo-img img {
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-img img:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #333;
+}
+
+nav a.active {
+    color: firebrick;
+    font-weight: bold;
+}
+
+nav span {
+    color: dodgerblue;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Datetime Styles */
+.datetime {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.clock {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px dimgrey;
+}
+
+.inside {
+    width: 100%;
+    background-color: deepskyblue;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.days-of-week span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background: deeppink;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.days-of-week .active {
+    background: darkviolet;
+    color: darkturquoise;
+}
+
+.time {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.date img {
+    width: 20px;
+}
+
+/* Page Title Styles */
+.page-title {
+    background: #222;
+    margin-top: 20px;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.page-title-mid h2 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.page-title-mid p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+    .datetime {
+        margin-top: 120px;
+    }
+    .clock {
+        padding: 15px;
+    }
+    .time {
+        font-size: 1.5rem;
+    }
+    .date {
+        font-size: 1rem;
+    }
+}
+
+#hours {
+    color: darkslateblue;
+}
+
+#min {
+    color: darkseagreen;
+}
+
+#sec {
+    color: darksalmon;
+}
+
+#ampm {
+    color: darkred;
+}
+
+#day {
+    color: darkorchid;
+}
+
+#month {
+    color: darkorange;
+}
+
+#year {
+    color: darkolivegreen;
+}
+
+hr {
+    background-color: darkmagenta;
+    margin-bottom: 50px;
+    border: 0;
+    height: 1px;
+    margin: 20px 0;
+}
+
+/* General Styles */
+main {
+    padding: 20px 0;
+}
+
+/* Section Styles */
+section {
+    background: #343434;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sec-11 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tab Styles */
+.maven-tabs {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid darkkhaki;
+    margin-bottom: 20px;
+}
+
+.maven-tablink {
+    background-color: darkgreen;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    color: darkgoldenrod;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    width: calc(100% / 3);
+}
+
+.maven-tablink:hover {
+    background-color: darkcyan;
+}
+
+.maven-tablink.active {
+    background-color: darkblue;
+    color: cyan;
+}
+
+.maven-tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid crimson;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.maven-tabcontent.active {
+    display: block;
+}
+
+/* DAX Function Styles */
+.dax-function {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dax-function > div {
+    border: 2px solid cornsilk;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 5px;
+    display: inline-block;
+    width: auto;
+    min-width: 50px;
+    overflow-x: auto;
+}
+
+.dax-function p {
+    padding: 10px;
+    margin: 0;
+    background-color: cornflowerblue;
+    font-weight: bolder;
+}
+
+.dax-function-content {
+    width: fit-content;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .maven-tabs {
+        flex-direction: column;
+    }
+
+    .maven-tablink {
+        width: 100%;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+
+    .maven-tabcontent {
+        padding: 10px;
+    }
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px coral;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: chocolate; /* Blue header background */
+    color: chartreuse;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+table tr {
+    border-bottom: 1px solid cadetblue;
+}
+
+table tr:nth-child(even) {
+    background-color: burlywood; 
+}
+
+table tr:last-child {
+    border-bottom: 2px solid brown; 
+}
+
+table tr:hover {
+    background-color: blueviolet; /* Light gray on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        min-width: 120px; /* Minimum width for cells on small screens */
+    }
+}
+
+/* Action Buttons in Table */
+.action-cell a {
+    text-decoration: none;
+    color: blue;
+    margin-right: 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.action-cell a:hover {
+    color: blanchedalmond; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Zebra Striping for Better Readability */
+table.striped tr:nth-child(odd) {
+    background-color: black; /* White for odd rows */
+}
+
+table.striped tr:nth-child(even) {
+    background-color: bisque;
+}
+
+/* Bordered Table */
+table.bordered th,
+table.bordered td {
+    border: 1px solid beige;
+}
+
+/* Hover Effect for Bordered Table */
+table.bordered tr:hover {
+    background-color: azure;
+}
+
+i {
+    color: aquamarine;
+    padding-right: 5px;
+}
+
+i .active {
+    color: aqua;
+}
+
+i:active {
+    color: antiquewhite;
+}
+
+i:focus {
+    color: aliceblue;
+}
+
+i:hover {
+    color: yellowgreen;
 }
