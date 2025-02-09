@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: whitesmoke;
+}
+
+a:active {
+    color: white;
+}
+
+a:focus {
+    color: violet;
+}
+
+a:hover {
+    color: turquoise;
+}
+
+.active {
+    color: tomato;
+}
+
+body {
+    background-color: #121212;
+    color: thistle;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin:0 0 20px 0;
+	font-weight:300;
+	line-height:1.5em;
+}
+
+h1{
+    color: teal;
+	font-size:48px;
+}
+
+h2{
+    color: tan;
+	font-size:36px;
+}
+
+h3{
+    color: steelblue;
+	font-size:24px;
+}
+
+h4{
+    color: springgreen;
+	font-size:20px;
+}
+
+h5{
+    color: snow;
+	font-size:18px;
+}
+
+h6{
+    color: slateblue;
+	font-size:16px;
+}
+
+hr {
+    background-color: skyblue;
+    margin-bottom: 50px;
+    border: 0;
+    height: 1px;
+    margin: 20px 0;
+}
+
+i {
+    color: silver;
+    padding-right: 10px;
+}
+
+i .active {
+    color: sienna;
+}
+
+i:active {
+    color: seashell;
+}
+
+i:focus {
+    color: seagreen;
+}
+
+i:hover {
+    color: sandybrown;
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+span {
+    color: salmon;
+}
+
+strong {
+    color: saddlebrown;
+}
+
+#displayYear {
+    color: royalblue;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    height: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav .active {
+    color: rosybrown;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* Container utama */
+.datetime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rebeccapurple;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* Page Title */
+.page-title {
+    text-align: left;
+    flex: 1;
+}
+
+.page-title h2 {
+    font-weight: 600;
+    color: purple;
+    margin-bottom: 5px;
+}
+
+.page-title span {
+    color: powderblue;
+    font-weight: 400;
+}
+
+.page-title p {
+    font-size: 14px;
+    color: plum;
+}
+
+/* Clock */
+.clock {
+    background: #222831;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px pink;
+}
+
+.inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Days of Week */
+.days-of-week {
+    display: flex;
+    gap: 8px;
+}
+
+.days-of-week span {
+    font-size: 12px;
+    padding: 6px 8px;
+    background: #333;
+    border-radius: 4px;
+    color: peru;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.days-of-week span.active {
+    background: #00ADB5;
+    color: peachpuff;
+    font-weight: bold;
+}
+
+.days-of-week span:hover {
+    background: #00ADB5;
+    color: papayawhip;
+}
+
+/* Time Display */
+.time {
+    font-size: 22px;
+    font-weight: bold;
+    color: palevioletred;
+    margin: 10px 0;
+}
+
+/* Date Display */
+.date {
+    font-size: 14px;
+    color: paleturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.date .icon img {
+    width: 16px;
+    filter: brightness(0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .datetime {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .page-title,
+    .clock {
+        width: 100%;
+        text-align: center;
+    }
+
+    .days-of-week {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
