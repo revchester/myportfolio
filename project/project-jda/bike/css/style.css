@@ -13,20 +13,20 @@ a:active {
 }
 
 a:focus {
-    color: violet;
+    color: wheat;
 }
 
 a:hover {
-    color: turquoise;
+    color: violet;
 }
 
 .active {
-    color: tomato;
+    color: turquoise;
 }
 
 body {
     background-color: #121212;
-    color: thistle;
+    color: tomato;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -45,37 +45,37 @@ h6{
 }
 
 h1{
-    color: teal;
+    color: thistle;
 	font-size:48px;
 }
 
 h2{
-    color: tan;
+    color: teal;
 	font-size:36px;
 }
 
 h3{
-    color: steelblue;
+    color: tan;
 	font-size:24px;
 }
 
 h4{
-    color: springgreen;
+    color: steelblue;
 	font-size:20px;
 }
 
 h5{
-    color: snow;
+    color: springgreen;
 	font-size:18px;
 }
 
 h6{
-    color: slateblue;
+    color: snow;
 	font-size:16px;
 }
 
 hr {
-    background-color: skyblue;
+    background-color: slateblue;
     margin-bottom: 50px;
     border: 0;
     height: 1px;
@@ -83,24 +83,24 @@ hr {
 }
 
 i {
-    color: silver;
+    color: skyblue;
     padding-right: 10px;
 }
 
 i .active {
-    color: sienna;
+    color: silver;
 }
 
 i:active {
-    color: seashell;
+    color: sienna;
 }
 
 i:focus {
-    color: seagreen;
+    color: seashell;
 }
 
 i:hover {
-    color: sandybrown;
+    color: seagreen;
 }
 
 main {
@@ -108,16 +108,30 @@ main {
     padding: 20px;
 }
 
+ol {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 span {
-    color: salmon;
+    color: sandybrown;
 }
 
 strong {
-    color: saddlebrown;
+    color: salmon;
+}
+
+ul {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul li, ol li {
+    padding-right: 25px;
 }
 
 #displayYear {
-    color: royalblue;
+    color: saddlebrown;
 }
 
 /* Header */
@@ -127,7 +141,7 @@ header {
     align-items: center;
     background: #1e1e1e;
     padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px royalblue;
 }
 
 .logo img {
@@ -267,4 +281,206 @@ nav a:hover {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+/*  section body    */
+/* Dark Mode Styling */
+/* Styling untuk container utama */
+.bike-tab-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px palegreen;
+}
+
+/* Styling untuk tombol tab */
+.bike-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid palegoldenrod;
+    padding-bottom: 5px;
+}
+
+.bike-tablinks {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: orchid;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.bike-tablinks:hover {
+    color: orangered;
+}
+
+/* Efek garis bawah saat aktif */
+.bike-tablinks::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: orange;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bike-tablinks.active::after {
+    width: 100%;
+}
+
+/* Styling untuk konten tab */
+.bike-tabcontent {
+    display: none;
+    padding: 20px;
+    animation: fadeEffect 0.5s;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px olivedrab;
+    margin-top: 10px;
+}
+
+.bike-tabcontent ol,
+.bike-tabcontent ul {
+    padding-left: inherit;
+    padding-right: inherit;
+}
+
+.bike-tabcontent ol li,
+.bike-tabcontent ul li {
+    padding-left: inherit;
+    padding-right: inherit;
+}
+
+/* Animasi fade in */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Styling untuk tabel dataset */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid olive;
+    padding: 12px;
+    text-align: left;
+    color: oldlace;
+}
+
+table th {
+    background: navy;
+    color: navajowhite;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(odd) {
+    background: #252525;
+}
+
+table tbody tr:hover {
+    background: #333;
+}
+
+/* Styling tombol aksi */
+.view-file-btn, .download-file-btn, .source-file-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.view-file-btn {
+    background: moccasin;
+    color: mistyrose;
+}
+
+.download-file-btn {
+    background: mintcream;
+    color: midnightblue;
+}
+
+.source-file-btn {
+    background: mediumvioletred;
+    color: mediumturquoise;
+}
+
+.view-file-btn:hover, .download-file-btn:hover, .source-file-btn:hover {
+    opacity: 0.8;
+}
+
+/* Styling untuk iframe */
+iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    border: none;
+    background: mediumspringgreen;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .bike-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bike-tablinks {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid mediumslateblue;
+    }
+}
+
+/* DAX Function Styles */
+.dax-function {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dax-function > div {
+    border: 2px solid mediumseagreen;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 5px;
+    display: inline-block;
+    width: auto;
+    min-width: 50px;
+    overflow-x: auto;
+}
+
+.dax-function p {
+    padding: 10px;
+    margin: 0;
+    background-color: mediumpurple;
+    font-weight: bolder;
+}
+
+.dax-function-content {
+    width: fit-content;
+    border-radius: 10px;
 }

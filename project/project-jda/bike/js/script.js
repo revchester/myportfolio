@@ -45,3 +45,30 @@ document.addEventListener("DOMContentLoaded", function () {
     // Menampilkan tahun saat ini di elemen dengan ID displayYear
     document.getElementById("displayYear").innerText = new Date().getFullYear();
 });
+
+//  section body
+// Fungsi untuk membuka tab
+function openTab(evt, tabName) {
+    let i, tabcontent, tablinks;
+    
+    // Sembunyikan semua konten tab
+    tabcontent = document.getElementsByClassName("bike-tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Hapus kelas "active" dari semua tombol
+    tablinks = document.getElementsByClassName("bike-tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Tampilkan tab yang dipilih dan tambahkan kelas "active"
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+}
+
+// Atur tab pertama sebagai default yang terbuka
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("defaultOpen").click();
+});
