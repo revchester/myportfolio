@@ -356,8 +356,8 @@ nav span {
     background: dimgrey;
     padding: 8px 16px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: deepskyblue;
+    box-shadow: 0 4px 8px deepskyblue;
+    color: deeppink;
 }
 
 /* Responsive */
@@ -405,7 +405,7 @@ nav span {
 }
 
 .dax-function > div {
-    border: 2px solid mediumseagreen;
+    border: 2px solid darkviolet;
     border-radius: 10px;
     overflow: hidden;
     background-color: transparent;
@@ -419,7 +419,7 @@ nav span {
 .dax-function p {
     padding: 10px;
     margin: 0;
-    background-color: mediumpurple;
+    background-color: darkturquoise;
     font-weight: bolder;
 }
 
@@ -440,8 +440,8 @@ nav span {
 .nhtsa-tab-container {
     width: 100%;
     margin: 20px auto;
-    background: #1a1a1a;
-    border: 1px solid #444;
+    background: darkslategrey;
+    border: 1px solid darkslateblue;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -452,8 +452,8 @@ nav span {
     display: flex;
     margin: 0;
     padding: 0;
-    border-bottom: 1px solid #444;
-    background: #2b2b2b;
+    border-bottom: 1px solid darkseagreen;
+    background: darksalmon;
 }
 
 .nhtsa-tab-menu .nhtsa-tab-item {
@@ -462,24 +462,24 @@ nav span {
     text-align: center;
     cursor: pointer;
     font-weight: bold;
-    color: #bbb;
+    color: darkred;
     transition: background 0.3s, color 0.3s;
 }
 
 .nhtsa-tab-menu .nhtsa-tab-item:hover {
-    background: #333;
+    background: darkorchid;
 }
 
 .nhtsa-tab-menu .nhtsa-tab-item.active {
-    background: #ff9800;
-    color: #1a1a1a;
+    background: darkorange;
+    color: darkolivegreen;
 }
 
 /* Konten Tab */
 .nhtsa-tab-content {
     padding: 20px;
-    background: #1a1a1a;
-    color: #e0e0e0;
+    background: darkmagenta;
+    color: darkkhaki;
 }
 
 .nhtsa-tab-panel {
@@ -500,25 +500,25 @@ nav span {
 .nhtsa-tab-panel table th,
 .nhtsa-tab-panel table td {
     padding: 10px;
-    border: 1px solid #444;
+    border: 1px solid darkgrey;
     text-align: left;
 }
 
 .nhtsa-tab-panel table th {
-    background: #2b2b2b;
-    color: #ddd;
+    background: darkgreen;
+    color: darkgoldenrod;
 }
 
 .nhtsa-tab-panel table td {
-    background: #1a1a1a;
-    color: #e0e0e0;
+    background: darkcyan;
+    color: darkblue;
 }
 
 /* Tombol pada Tab Dataset */
 .nhtsa-tab-panel .view-file-btn,
 .nhtsa-tab-panel .download-file-btn {
-    background: #ff9800;
-    color: #1a1a1a;
+    background: cyan;
+    color: crimson;
     padding: 5px 10px;
     text-decoration: none;
     border-radius: 3px;
@@ -527,5 +527,5 @@ nav span {
 
 .nhtsa-tab-panel .view-file-btn:hover,
 .nhtsa-tab-panel .download-file-btn:hover {
-    background: #e68900;
+    background: cornsilk;
 }
