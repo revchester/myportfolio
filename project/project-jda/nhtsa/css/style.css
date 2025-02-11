@@ -1,0 +1,531 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: mediumpurple;
+}
+
+a:active {
+    color: mediumorchid;
+}
+
+a:focus {
+    color: mediumblue;
+}
+
+a:hover {
+    color: mediumaquamarine;
+}
+
+.active {
+    color: maroon;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin:0 0 20px 0;
+	font-weight:300;
+	line-height:1.5em;
+}
+
+h1{
+    color: magenta;
+	font-size:48px;
+}
+
+h2{
+    color: linen;
+	font-size:36px;
+}
+
+h3{
+    color: limegreen;
+	font-size:24px;
+}
+
+h4{
+    color: lime;
+	font-size:20px;
+}
+
+h5{
+    color: lightyellow;
+	font-size:18px;
+}
+
+h6{
+    color: lightsteelblue;
+	font-size:16px;
+}
+
+hr {
+    background-color: lightskyblue;
+    margin-bottom: 50px;
+    border: 0;
+    height: 1px;
+    margin: 20px 0;
+}
+
+i {
+    color: lightseagreen;
+    padding-right: 10px;
+}
+
+i .active {
+    color: lightsalmon;
+}
+
+i:active {
+    color: lightpink;
+}
+
+i:focus {
+    color: lightgreen;
+}
+
+i:hover {
+    color: lightgoldenrodyellow;
+}
+
+ol {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+span {
+    color: lightcyan;
+}
+
+strong {
+    color: lightcoral;
+}
+
+ul {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul li, ol li {
+    padding-right: 25px;
+}
+
+#displayYear {
+    color: lightblue;
+}
+
+/* Body dan Font */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #121212; /* Latar belakang gelap */
+    color: lemonchiffon; /* Warna teks terang */
+    line-height: 1.6;
+    font-size: 13px;
+}
+
+/* Header */
+header {
+    background-color: #1f1f1f;
+    top: 0;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px lawngreen;
+}
+
+.logo-img img {
+    height: 30px;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: lavenderblush;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: khaki; /* Aksen hijau kebiruan */
+}
+
+/*
+nav a.active {
+    color: ivory;
+    font-weight: bold;
+}*/
+
+nav span {
+    color: ivory;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    max-height: 100vh;
+    margin: 25px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+/* Kalender */
+.calendar {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px indigo;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: indianred;
+}
+
+.calendar-header h2 {
+    font-size: 1.8em;
+}
+
+.nav-button {
+    background: #333;
+    border: none;
+    color: hotpink;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1.1em;
+}
+
+.nav-button:hover {
+    background: honeydew;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.day-names .day-name {
+    background: #333;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    color: greenyellow;
+}
+
+#calendar-days div {
+    background: #2a2a2a;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+#calendar-days div:hover {
+    background: #3a3a3a;
+    transform: scale(1.05);
+}
+
+#calendar-days div.today {
+    background: green;
+    color: goldenrod;
+    font-weight: bold;
+}
+
+/* Container untuk Jam Analog & Digital */
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Jam Analog */
+.clock {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    background: gold;
+    border: 6px solid ghostwhite;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px gainsboro;
+}
+
+/* Angka pada Jam Analog */
+.clock .number {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    color: fuchsia;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+/* Posisi angka (dengan asumsi pusat jam di 80px,80px dan radius ~70px) */
+.clock .number.number12 { top: 5px; left: 75px; }
+.clock .number.number1  { top: 19px; left: 115px; }
+.clock .number.number2  { top: 45px; left: 141px; }
+.clock .number.number3  { top: 75px; left: 144px; }
+.clock .number.number4  { top: 115px; left: 141px; }
+.clock .number.number5  { top: 141px; left: 115px; }
+.clock .number.number6  { top: 140px; left: 75px; }
+.clock .number.number7  { top: 141px; left: 45px; }
+.clock .number.number8  { top: 115px; left: 19px; }
+.clock .number.number9  { top: 75px; left: 5px; }
+.clock .number.number10 { top: 45px; left: 19px; }
+.clock .number.number11 { top: 19px; left: 45px; }
+
+/* Jarum Jam */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 40px;
+    background: forestgreen;
+    transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.minute-hand {
+    width: 4px;
+    height: 55px;
+    background: floralwhite;
+    transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.second-hand {
+    width: 2px;
+    height: 65px;
+    background: firebrick;
+    transition: transform 0.05s linear;
+}
+
+/* Titik Tengah Jam */
+.center-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: dodgerblue;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Jam Digital */
+.digital-clock {
+    font-size: 1.6em;
+    font-weight: bold;
+    background: dimgrey;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: deepskyblue;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .calendar {
+        max-width: 90%;
+    }
+    .clock {
+        width: 140px;
+        height: 140px;
+    }
+    .digital-clock {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    nav {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    nav a,
+    nav span {
+        margin: 5px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* DAX Function Styles */
+.dax-function {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dax-function > div {
+    border: 2px solid mediumseagreen;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 5px;
+    display: inline-block;
+    width: auto;
+    min-width: 50px;
+    overflow-x: auto;
+}
+
+.dax-function p {
+    padding: 10px;
+    margin: 0;
+    background-color: mediumpurple;
+    font-weight: bolder;
+}
+
+.dax-function-content {
+    width: fit-content;
+    border-radius: 10px;
+}
+
+/* Dark Theme Tabs - Professional Style */
+.page-section {
+    margin: 0 auto;
+}
+
+.section-content {
+    padding: 0 25px;
+}
+
+.nhtsa-tab-container {
+    width: 100%;
+    margin: 20px auto;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Menu Tab */
+.nhtsa-tab-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #444;
+    background: #2b2b2b;
+}
+
+.nhtsa-tab-menu .nhtsa-tab-item {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #bbb;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nhtsa-tab-menu .nhtsa-tab-item:hover {
+    background: #333;
+}
+
+.nhtsa-tab-menu .nhtsa-tab-item.active {
+    background: #ff9800;
+    color: #1a1a1a;
+}
+
+/* Konten Tab */
+.nhtsa-tab-content {
+    padding: 20px;
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.nhtsa-tab-panel {
+    display: none;
+}
+
+.nhtsa-tab-panel.active {
+    display: block;
+}
+
+/* Tabel pada Tab Dataset */
+.nhtsa-tab-panel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.nhtsa-tab-panel table th,
+.nhtsa-tab-panel table td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+.nhtsa-tab-panel table th {
+    background: #2b2b2b;
+    color: #ddd;
+}
+
+.nhtsa-tab-panel table td {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Tombol pada Tab Dataset */
+.nhtsa-tab-panel .view-file-btn,
+.nhtsa-tab-panel .download-file-btn {
+    background: #ff9800;
+    color: #1a1a1a;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.nhtsa-tab-panel .view-file-btn:hover,
+.nhtsa-tab-panel .download-file-btn:hover {
+    background: #e68900;
+}
