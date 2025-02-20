@@ -291,20 +291,20 @@ nav span {
     color: fuchsia;
     transform: translate(-50%, -50%);
     font-weight: bolder;
-    font-size: 13px;
+    font-size: 30px;
 }
 
 /* Posisi angka (dengan asumsi pusat jam di 80px,80px dan radius ~70px) */
-.clock .number.number12 { top: 5px; left: 75px; }
+.clock .number.number12 { top: calc(100% / 10); left: calc(100% / 2); }
 .clock .number.number1  { top: 19px; left: 115px; }
 .clock .number.number2  { top: 45px; left: 141px; }
-.clock .number.number3  { top: 75px; left: 144px; }
+.clock .number.number3  { top: calc(100% / 2); right: -10px; }
 .clock .number.number4  { top: 115px; left: 141px; }
 .clock .number.number5  { top: 141px; left: 115px; }
-.clock .number.number6  { top: 140px; left: 75px; }
+.clock .number.number6  { bottom: -7px; left: calc(100% / 2); }
 .clock .number.number7  { top: 141px; left: 45px; }
 .clock .number.number8  { top: 115px; left: 19px; }
-.clock .number.number9  { top: 75px; left: 5px; }
+.clock .number.number9  { top: calc(100% / 2); left: 10px; }
 .clock .number.number10 { top: 45px; left: 19px; }
 .clock .number.number11 { top: 19px; left: 45px; }
 
@@ -528,4 +528,16 @@ nav span {
 .nhtsa-tab-panel .view-file-btn:hover,
 .nhtsa-tab-panel .download-file-btn:hover {
     background: cornsilk;
+}
+
+.nhtsa-tab-panel ol,
+.nhtsa-tab-panel ul {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nhtsa-tab-panel ol li,
+.nhtsa-tab-panel ul li {
+    padding-left: 15px;
+    padding-right: 15px;
 }

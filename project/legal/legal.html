@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revardy D. Chester | My Portfolio | Projects - Legal</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/scroll.css">
+    <link rel="shortcut icon" href="../../brush/image/logo/wolf_01.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/abadbabf6f.js" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../index.html"><img src="../../brush/image/logo/logo.png" alt="logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="https://revchester.github.io/myresume/"><i class="fa-regular fa-address-card"></i>Resume</a></li>
+                <li><a href="../../brush/portfolio.html"><i class="fa-solid fa-certificate"></i>Certificate</a></li>
+                <li>
+                    <a href="../project.html"><i class="fa-solid fa-diagram-project"></i>Projects</a>
+                    <ul>
+                        <li><a href="../project-jda/project-jda.html"><i class="fa-solid fa-chart-simple"></i>Junior DA</a></li>
+                        <li><a href="../legal/legal.html"><i class="fa-solid fa-scale-balanced"></i>Legal A/D</a></li>
+                        <li><a href="../ndt/ndt.html"><i class="fa-solid fa-magnet"></i>NDT Technician</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="datetime">
+            <div class="date">
+                <div id="hari"></div>
+                <div id="tanggal"></div>
+                <div id="bulan"></div>
+                <div id="tahun"></div>
+            </div>
+            <div class="time">
+                <div id="hour"></div>
+                <div id="dot">:</div>
+                <div id="min"></div>
+                <div id="dot">:</div>
+                <div id="sec"></div>
+            </div>
+        </div>
+    </header>
+    <div class="page-title">
+        <div class="page-title-left">
+            <h2>Project <span>|</span> Legal Administration <span>/</span> Documentation</h2>
+            <p>Pengurusan berbagai macam dokumen administrasi hukum seperti pembuatan Akta Pendirian/Perubahan PT/CV/Yayasan/Perkumpulan, Akta Jual Beli Tanah dan sejenisnya serta akta lainnya.</p>
+            <p style="font-weight: bolder; text-decoration: underline; font-style: italic;">DISCLAIMER</p>
+            <p style="font-style: italic;">Untuk menjaga kerahasiaan dokumen client, file-file tidak akan disertakan dalam database website ini. Hanya menampilkan daftar nama Badan Hukum terkait.</p>
+        </div>
+    </div>
+    <div class="logo-container">
+        <div class="logo-item" data-tooltip="Notaris">
+            <img src="../../brush/image/logo/notaris.png" alt="Notaris">
+        </div>
+        <div class="logo-item" data-tooltip="Perseroan Terbatas">
+            <img src="https://ahu.go.id/themes/corporate/assets/img/image/icon-app/ahu-icon-4.png" alt="Perseroan Terbatas">
+        </div>
+        <div class="logo-item" data-tooltip="Persekutuan Komanditer">
+            <img src="https://ahu.go.id/themes/corporate/assets/img/image/icon-app/logo_sabu.png" alt="Persekutuan Komanditer">
+        </div>
+        <div class="logo-item" data-tooltip="Yayasan">
+            <img src="https://ahu.go.id/themes/corporate/assets/img/image/icon-app/ahu-icon-8.png" alt="Yayasan">
+        </div>
+        <div class="logo-item" data-tooltip="Perkumpulan">
+            <img src="https://ahu.go.id/themes/corporate/assets/img/image/icon-app/ahu-icon-6.png" alt="Perkumpulan">
+        </div>
+        <div class="logo-item" data-tooltip="PPAT">
+            <img src="../../brush/image/logo/ppat.png" alt="PPAT">
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari di dalam tabel..."
+            onkeyup="searchTable()"
+            />
+            <i class="fa-solid fa-xmark clear-icon" onclick="clearSearch()"></i>
+        </div>
+        <div class="filter">
+            <button class="filter-btn active" data-filter="all" onclick="filterTable('all')">All</button>
+            <button class="filter-btn" data-filter="pt" onclick="filterTable('pt')">PT</button>
+            <button class="filter-btn" data-filter="cv" onclick="filterTable('cv')">CV</button>
+            <button class="filter-btn" data-filter="yys" onclick="filterTable('yys')">Yayasan</button>
+            <button class="filter-btn" data-filter="pkpl" onclick="filterTable('pkpl')">Perkumpulan</button>
+            <button class="filter-btn" data-filter="ppat" onclick="filterTable('ppat')">PPAT</button>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Database Akta Notaris dan PPAT</h3>
+        <div class="table-wrapper">
+            <table class="database-table" border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Jenis Akta</th>
+                        <th>Jenis Badan Hukum</th>
+                        <th>Nama Badan Hukum</th>
+                        <th>Nomor Akta</th>
+                        <th>Tanggal Akta</th>
+                        <th>Tipe Akta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--    2020    -->
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. ESJEBE JAYA ABADI</td>
+                        <td>12 / 2020</td>
+                        <td>31-12-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. MUGI KARYA PERSADA</td>
+                        <td>05 / 2020</td>
+                        <td>10-12-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. AURA BERSAUDARA MANDIRI</td>
+                        <td>04 / 2020</td>
+                        <td>08-12-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>ANSHORULLAH PEDULI NEGERI</td>
+                        <td>16 / 2020</td>
+                        <td>24-11-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. MUGI KARYA PERSADA</td>
+                        <td>14 / 2020</td>
+                        <td>17-11-2020</td>
+                        <td>Pendirian/td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. MALAYA ANUCARA TANI</td>
+                        <td>04 / 2020</td>
+                        <td>06-11-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. BIMA PRATAMA</td>
+                        <td>07 / 2020</td>
+                        <td>13-10-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. AKYYA PUTRA MANDIRI</td>
+                        <td>04 / 2020</td>
+                        <td>07-10-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. AKYYA PUTRA MANDIRI</td>
+                        <td>10 / 2020</td>
+                        <td>26-09-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. REYA MINING INDROPRIMA</td>
+                        <td>07 / 2020</td>
+                        <td>26-09-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. TUALANG TIGA MALINDO</td>
+                        <td>06 / 2020</td>
+                        <td>19-08-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. TUALANG TIGA MALINDO</td>
+                        <td>04 / 2020</td>
+                        <td>11-08-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. RIDWAN JAYA KARYA</td>
+                        <td>17 / 2020</td>
+                        <td>29-07-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. CIPTA ADHI GUNA</td>
+                        <td>16 / 2020</td>
+                        <td>28-07-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. ARI KONSTRUKSI SUMBAR</td>
+                        <td>14 / 2020</td>
+                        <td>28-07-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. LAU GROUP</td>
+                        <td>12 / 2020</td>
+                        <td>21-07-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. ALWAHIDA TECHNO</td>
+                        <td>11 / 2020</td>
+                        <td>20-07-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>16 / 2020</td>
+                        <td>16-07-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>LANGGAM KASIH BUNDA (LKB)</td>
+                        <td>05 / 2020</td>
+                        <td>15-07-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. EMPAT SAUDARA PALEMBAYAN (ESP)</td>
+                        <td>04 / 2020</td>
+                        <td>07-07-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>15 / 2020</td>
+                        <td>06-07-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. TYARA</td>
+                        <td>03 / 2020</td>
+                        <td>03-07-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. RAFIE FATHULLAH</td>
+                        <td>01 / 2020</td>
+                        <td>01-07-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. EKA JAYA ABADI</td>
+                        <td>09 / 2020</td>
+                        <td>23-06-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. KINCIA RINDANG KONSTRUKSI</td>
+                        <td>08 / 2020</td>
+                        <td>20-06-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. INDIGO JAYA</td>
+                        <td>07 / 2020</td>
+                        <td>19-06-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. BERLIAN EKSKLUSIF</td>
+                        <td>05 / 2020</td>
+                        <td>16-06-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. ARSYILA</td>
+                        <td>04 / 2020</td>
+                        <td>15-06-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. SAMUDRA ANDALAS PERKASA</td>
+                        <td>03 / 2020</td>
+                        <td>15-06-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>14 / 2020</td>
+                        <td>12-06-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>13 / 2020</td>
+                        <td>12-06-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>12 / 2020</td>
+                        <td>19-05-2020</td>
+                        <td>APHT</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>11 / 2020</td>
+                        <td>19-05-2020</td>
+                        <td>APHT</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. TOFARI</td>
+                        <td>02 / 2020</td>
+                        <td>12-05-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>10 / 2020</td>
+                        <td>08-05-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>09 / 2020</td>
+                        <td>08-05-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>08 / 2020</td>
+                        <td>17-04-2020</td>
+                        <td>APHT</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. NISHIKA JAYA KARYA</td>
+                        <td>09 / 2020</td>
+                        <td>24-03-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. NISHIKA JAYA KARYA</td>
+                        <td>08 / 2020</td>
+                        <td>20-03-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. NOVER BUSANA COLLECTION</td>
+                        <td>07 / 2020</td>
+                        <td>20-03-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>07 / 2020</td>
+                        <td>20-03-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. USAHA MUDA</td>
+                        <td>06 / 2020</td>
+                        <td>16-03-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. FIZNI FA’L MANDIRI</td>
+                        <td>05 / 2020</td>
+                        <td>12-03-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pkpl">Yayasan</td>
+                        <td>SANGGAR CAHAYO AMEH (SCA)</td>
+                        <td>03 / 2020</td>
+                        <td>03-03-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>NAGARI AMPEK KOTO PALEMBAYAN (NAKOPA)</td>
+                        <td>16 / 2020</td>
+                        <td>26-02-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. IKO MINANG RITEL (IKOMART)</td>
+                        <td>14 / 2020</td>
+                        <td>20-02-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>LEMBAGA PEJUANG KEADILAN RANAH MINANG (LPK RM)</td>
+                        <td>09 / 2020</td>
+                        <td>17-02-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. PUJI EKA SEJAHTERA (PESE)</td>
+                        <td>02 / 2020</td>
+                        <td>07-02-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. ADE BUSANA COLLECTION</td>
+                        <td>17 / 2020</td>
+                        <td>27-02-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. TIGA PUTRI PANORAMA (TIPA)</td>
+                        <td>11 / 2020</td>
+                        <td>20-02-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>06 / 2020</td>
+                        <td>20-02-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. SIMPANG SAUS (SIMSAS)</td>
+                        <td>08 / 2020</td>
+                        <td>14-02-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. PORSE JAYA AGROTAMA (PJA)</td>
+                        <td>07 / 2020</td>
+                        <td>11-02-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>05 / 2020</td>
+                        <td>31-01-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. ALGA JASA MANDIRI (ALAMA)</td>
+                        <td>04 / 2020</td>
+                        <td>17-01-2020</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>04 / 2020</td>
+                        <td>17-01-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. FARSYA STORY PERDANA (FSP)</td>
+                        <td>03 / 2020</td>
+                        <td>16-01-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>03 / 2020</td>
+                        <td>15-01-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>02 / 2020</td>
+                        <td>15-01-2020</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. BERSAMA GRUB</td>
+                        <td>01 / 2020</td>
+                        <td>10-01-2020</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>01 / 2020</td>
+                        <td>03-01-2020</td>
+                        <td>APHB</td>
+                    </tr>
+                    <!--    2019    -->
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. FARSYA STORY PERDANA (FSP)</td>
+                        <td>08 / 2019</td>
+                        <td>23-12-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>28 / 2019</td>
+                        <td>13-12-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. PUJI EKA SEJAHTERA (PESE)</td>
+                        <td>03 / 2019</td>
+                        <td>04-12-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>27 / 2019</td>
+                        <td>29-11-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. POLITEKNIK TIGA UTAMA</td>
+                        <td>10 / 2019</td>
+                        <td>27-11-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>26 / 2019</td>
+                        <td>20-11-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>25 / 2019</td>
+                        <td>15-11-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pkpl">Perkumpulan</td>
+                        <td>GERAKAN PEMUDA PEDULI KECAMATAN PALEMBAYAN</td>
+                        <td>08 / 2019</td>
+                        <td>14-11-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. FRESSY CITA RADILA (FCR)</td>
+                        <td>02 / 2019</td>
+                        <td>01-11-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>24 / 2019</td>
+                        <td>29-10-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. WARUNG DISAIN</td>
+                        <td>10 / 2019</td>
+                        <td>26-10-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. TYARA</td>
+                        <td>04 / 2019</td>
+                        <td>17-10-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>23 / 2019</td>
+                        <td>16-10-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>22 / 2019</td>
+                        <td>09-10-2019</td>
+                        <td>APHB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. LARAS JAYA AABADI (LAYA)</td>
+                        <td>01 / 2019</td>
+                        <td>02-10-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. AZA KARYA PRATAMA</td>
+                        <td>10 / 2019</td>
+                        <td>28-09-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. KEMALA SEJAHTERA MANDIRI (KESEMA)</td>
+                        <td>09 / 2019</td>
+                        <td>23-09-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>21 / 2019</td>
+                        <td>16-09-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>20 / 2019</td>
+                        <td>16-09-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>19 / 2019</td>
+                        <td>16-09-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>18 / 2019</td>
+                        <td>16-09-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>17 / 2019</td>
+                        <td>16-09-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>16 / 2019</td>
+                        <td>16-09-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>SOSIAL DAN PENDIDIKAN AR RAZZAQ PEDULI</td>
+                        <td>08 / 2019</td>
+                        <td>16-09-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. HARAPAN MUTIA</td>
+                        <td>07 / 2019</td>
+                        <td>12-09-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>15 / 2019</td>
+                        <td>07-09-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. RAJAWALI BUKIT PERKASA (RAKIT)</td>
+                        <td>02 / 2019</td>
+                        <td>04-09-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. PROJEKA</td>
+                        <td>11 / 2019</td>
+                        <td>31-08-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. FAFAALFA</td>
+                        <td>09 / 2019</td>
+                        <td>30-08-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. RIDWAN JAYA KARYA</td>
+                        <td>08 / 2019</td>
+                        <td>30-08-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. EKA JAYA ABADI</td>
+                        <td>07 / 2019</td>
+                        <td>30-08-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>14 / 2019</td>
+                        <td>29-08-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. PORSE JAYA AGROTAMA (PJA)</td>
+                        <td>06 / 2019</td>
+                        <td>26-08-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. MAHLIGAI ALAM SEMESTA</td>
+                        <td>05 / 2019</td>
+                        <td>22-08-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. COSMETICS KEMPO INDUSTRI (COIN)</td>
+                        <td>06 / 2019</td>
+                        <td>30-07-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>13 / 2019</td>
+                        <td>18-07-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>12 / 2019</td>
+                        <td>17-07-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>11 / 2019</td>
+                        <td>15-07-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>10 / 2019</td>
+                        <td>15-07-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>09 / 2019</td>
+                        <td>12-07-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>08 / 2019</td>
+                        <td>29-05-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>07 / 2019</td>
+                        <td>15-05-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. AUTO BLITZ</td>
+                        <td>01 / 2019</td>
+                        <td>02-05-2019</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>06 / 2019</td>
+                        <td>30-04-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>ABDULLAH IBNU UMAR (AIBU)</td>
+                        <td>02 / 2019</td>
+                        <td>15-04-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>05 / 2019</td>
+                        <td>10-04-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. JAMALUS FAMILY SEJAHTERA (JFS)</td>
+                        <td>14 / 2019</td>
+                        <td>26-03-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>04 / 2019</td>
+                        <td>23-03-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. RAJO ALAM SUKSES (RAS)</td>
+                        <td>08 / 2019</td>
+                        <td>20-03-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>BELADIRI PERGURUAN PENCAK SILAT KINANTAN (PPS KINANTAN)</td>
+                        <td>06 / 2019</td>
+                        <td>14-03-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>03 / 2019</td>
+                        <td>06-03-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. KEJULASI</td>
+                        <td>07 / 2019</td>
+                        <td>27-02-2019</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>02 / 2019</td>
+                        <td>11-02-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PPAT</td>
+                        <td class="all ppat">-</td>
+                        <td>-</td>
+                        <td>01 / 2019</td>
+                        <td>25-01-2019</td>
+                        <td>AJB</td>
+                    </tr>
+                    <!--    2018    -->
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all cv">Persekutuan Komanditer</td>
+                        <td>CV. KELOMPOK KELUARGA MARGA SILIMA</td>
+                        <td>05 / 2018</td>
+                        <td>22-12-2018</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pkpl">Perkumpulan</td>
+                        <td>KOMUNITAS PENGEMUDI PARIWISATA BUKITTINGGI (KPPB)</td>
+                        <td>01 / 2018</td>
+                        <td>06-12-2018</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all pt">Perseroan Terbatas</td>
+                        <td>PT. PELITA ARRUYA MANDIRI UTAMA</td>
+                        <td>05 / 2018</td>
+                        <td>15-11-2018</td>
+                        <td>Perubahan</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Notaris</td>
+                        <td class="all yys">Yayasan</td>
+                        <td>AL-HARIST PERINTIS (ALPE)</td>
+                        <td>05 / 2018</td>
+                        <td>12-11-2018</td>
+                        <td>Pendirian</td>
+                    </tr>
+                    <!-- Tambahkan baris data lainnya di sini -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Pagination & Rows per Page -->
+        <div class="pagination-controls">
+            <div class="rows-per-page">
+            <label for="rowsPerPageSelect">Rows per page:</label>
+            <select id="rowsPerPageSelect" onchange="changeRowsPerPage()">
+                <option value="25" selected>25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+            </select>
+            </div>
+            <div id="pagination"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="page-footer">
+            <div class="page-footer-left">
+                <h4>Contact me via :</h4>
+                <p><i class="fa-solid fa-map-location-dot"></i>&nbsp;&nbsp;&nbsp;<strong>Alamat :</strong> <br>Kelurahan Belian <span>|</span> Kec. Batam Kota <span>/</span> Batam Center <span>|</span> Kota Batam <span>|</span> Prov. Kepulauan Riau. <span>|</span> 29464</p>
+                <p><i class="fa-solid fa-envelopes-bulk"></i>&nbsp;&nbsp;&nbsp;<strong>e-mail : </strong><a href="mailto:amalrahmanduya@gmail.com" target="_blank">amalrahmanduya@gmail.com</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i>&nbsp;&nbsp;&nbsp;<strong>HP / WA : </strong> +62 821 7376 1982</p>
+            </div>
+            <div class="page-footer-mid">
+                <h4>Menu</h4>
+                <a href="https://revchester.github.io/myportfolio/">Home</a>
+                <a href="https://revchester.github.io/myresume/">Resume</a>
+                <a href="../../../brush/portfolio.html">Certificate</a>
+                <a href="../../project.html">Project</a>
+            </div>
+            <div class="page-footer-mid">
+                <h4>Project</h4>
+                <a href="../project-jda.html">JDA</a>
+                <a href="../../legal/legal.html">LEGAL</a>
+                <a href="../../ndt/ndt.html">NDT</a>
+            </div>
+            <div class="footer-socmed">
+                <h4>Sosial Media</h4>
+                <div class="social-links">
+                    <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank" class="tooltip" data-title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank" class="tooltip" data-title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/revchester" target="_blank" class="tooltip" data-title="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:amalrahmanduya@gmail.com" target="_blank" class="tooltip" data-title="G-mail"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://wa.me/6282173761982" target="_blank" class="tooltip" data-title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <h4>Powered by :</h4>
+                <div class="powered-by">
+                    <img src="../../../brush/image/powered-by/chatgpt.png" alt="ChatGPT">
+                    <img src="../../../brush/image/powered-by/deepseek.png" alt="deepseek">
+                    <img src="../../../brush/image/powered-by/github.png" alt="github">
+                    <img src="../../../brush/image/powered-by/vsc.jpg" alt="VSC">
+                    <img src="../../../brush/image/powered-by/gdrive.png" alt="gdrive">
+                    <img src="../../../brush/image/powered-by/power-bi_logo.png" alt="PowerBI">
+                    <img src="../../../brush/image/powered-by/streamlit_hero.jpg" alt="StreamLit">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p>
+            <i class="fa-regular fa-copyright"></i>&nbsp;&nbsp;&nbsp;Copyright
+            <span id="displayYear">|</span> All Rights Reserved By
+            <a href="https://revchester.github.io/myportfolio/">Revardy D. Chester</a>
+        </p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

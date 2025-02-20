@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: cornflowerblue;
+}
+
+a:active {
+    color: coral;
+}
+
+a:focus {
+    color: chocolate;
+}
+
+a:hover {
+    color: chartreuse;
+}
+
+.active {
+    color: cadetblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin:0 0 20px 0;
+	font-weight:300;
+	line-height:1.5em;
+}
+
+h1{
+    color: burlywood;
+	font-size:48px;
+}
+
+h2{
+    color: brown;
+	font-size:36px;
+}
+
+h3{
+    color: blueviolet;
+	font-size:24px;
+}
+
+h4{
+    color: blue;
+	font-size:20px;
+}
+
+h5{
+    color: blanchedalmond;
+	font-size:18px;
+}
+
+h6{
+    color: bisque;
+	font-size:16px;
+}
+
+hr {
+    background-color: beige;
+    margin-bottom: 50px;
+    border: 0;
+    height: 1px;
+    margin: 20px 0;
+}
+
+i {
+    color: azure;
+    padding-right: 10px;
+}
+
+i .active {
+    color: aquamarine;
+}
+
+i:active {
+    color: aqua;
+}
+
+i:focus {
+    color: antiquewhite;
+}
+
+i:hover {
+    color: yellowgreen;
+}
+
+ol {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+span {
+    color: yellow;
+}
+
+strong {
+    color: wheat;
+}
+
+ul {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul li, ol li {
+    padding-right: 25px;
+}
+
+#displayYear {
+    color: violet;
+}
+
+/* css/style-dark.css */
+
+/* Menggunakan CSS custom properties (variabel) untuk memudahkan pengaturan warna */
+:root {
+    --bg-color: #121212;
+    --header-bg: #1f1f1f;
+    --nav-bg: #1f1f1f;
+    --text-color: #e0e0e0;
+    --accent-color: #bb86fc;
+    --hover-bg: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 13px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-bg);
+    padding: 10px 20px;
+    color: var(--text-color);
+}
+
+.logo img {
+    height: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {/*
+    color: var(--text-color);*/
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--hover-bg);
+    border-radius: 4px;
+}
+
+/* Sub-menu dropdown */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--nav-bg);
+    padding: 10px;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px turquoise;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    margin: 5px 0;
+    width: 150px;
+}
+
+nav ul li ul li a {
+    display: block;
+}
+
+/* Styling untuk tampilan tanggal dan waktu */
+.datetime {
+    text-align: center;
+}
+
+.datetime .date,
+.datetime .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* CSS untuk elemen .page-title dan turunannya */
+.page-title {
+    background: linear-gradient(135deg, tomato, thistle); /* Gradasi warna gelap */
+    color: teal;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title .page-title-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.page-title .page-title-left h2 span {
+    margin: 0 10px;
+    color: tan; /* Warna aksen untuk pemisah */
+}
+
+.page-title .page-title-left p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+/* Container untuk menyusun logo secara responsif */
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: steelblue; /* Ubah sesuai tema jika perlu */
+}
+
+/* Bungkus setiap logo */
+.logo-item {
+    position: relative;
+    display: inline-block;
+}
+
+/* Gaya untuk logo */
+.logo-item img {
+    width: 100px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efek hover pada logo */
+.logo-item img:hover {
+    transform: scale(1.25);
+    opacity: 0.9;
+}
+
+/* Tooltip styling */
+.logo-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Tempatkan tooltip di atas logo */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: springgreen;
+    color: snow;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 8px slateblue;
+}
+
+/* Tooltip arrow */
+.logo-item::before {
+    content: "";
+    position: absolute;
+    bottom: 115%; /* Sesuaikan agar menyatu dengan tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: skyblue transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+/* Tampilkan tooltip saat hover */
+.logo-item:hover::after,
+.logo-item:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ---------- Container Utama ---------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: silver;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px sienna;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* ---------- Top Bar (Pencarian & Filter) ---------- */
+.top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+/* ----- Search Container ----- */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: seashell;
+    border: 1px solid seagreen;
+    border-radius: 25px;
+    padding: 8px 12px;
+    max-width: 400px;
+    flex: 1;
+    box-shadow: 0 2px 4px sandybrown;
+    transition: border 0.3s ease;
+}
+
+.search-container:focus-within {
+    border-color: salmon;
+}
+
+.search-container .search-icon {
+    color: saddlebrown;
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    color: royalblue;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: rosybrown;
+}
+
+.search-container .clear-icon {
+    color: red;
+    font-size: 1.2rem;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search-container .clear-icon:hover {
+    color: rebeccapurple;
+}
+
+/* ----- Filter Container ----- */
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter .filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background-color: purple;
+    color: powderblue;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter .filter-btn:hover {
+    background-color: plum;
+}
+
+.filter .filter-btn.active {
+    background-color: pink;
+    color: peru;
+}
+
+/* ---------- Tabel Database ---------- */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.database-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.database-table thead {
+    background-color: #007BFF;
+    color: peachpuff;
+}
+
+.database-table th,
+.database-table td {
+    padding: 12px 15px;
+    border: 1px solid papayawhip;
+    text-align: left;
+}
+
+.database-table tbody tr:nth-child(even) {
+    background-color: palevioletred;
+}
+
+.database-table tbody tr:nth-child(odd) {
+    background-color: paleturquoise;
+    color: #121212;
+}
+
+.database-table tbody tr:hover {
+    background-color: palegreen;
+    color: #121212;
+}
+
+.database-table th:first-child,
+.database-table td:first-child {
+    width: 50px;
+    text-align: center;
+}
+
+/* ---------- Pagination Controls ---------- */
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.rows-per-page {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+#pagination {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+#pagination button {
+    padding: 6px 12px;
+    border: none;
+    background-color: palegoldenrod;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pagination button.active {
+    background-color: #007BFF;
+    color: orchid;
+    font-weight: bolder;
+}
+
+#pagination button:hover {
+    background-color: orangered;
+}
+
+/*
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #ddd;
+}*/
