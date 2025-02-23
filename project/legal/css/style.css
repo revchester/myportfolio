@@ -435,8 +435,8 @@ nav ul li ul li a {
 
 .database-table th,
 .database-table td {
-    padding: 12px 15px;
-    border: 1px solid papayawhip;
+    padding: 5px 15px;
+    border: 2px solid papayawhip;
     text-align: left;
 }
 
