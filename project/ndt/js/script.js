@@ -133,3 +133,11 @@ function changeBackground() {
 // Ganti background setiap 3 detik
 setInterval(changeBackground, 3000);
 changeBackground();
+
+//  display year
+document.addEventListener("DOMContentLoaded", function () {
+    const yearSpan = document.getElementById("displayYear");
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+});
